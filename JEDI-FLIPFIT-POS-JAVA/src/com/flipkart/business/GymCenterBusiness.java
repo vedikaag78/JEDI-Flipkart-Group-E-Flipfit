@@ -6,7 +6,7 @@ package com.flipkart.business;
 /**
  * 
  */
-public class GymCenterBusiness {
+public class GymCenterBusiness implements GymCenterBusinessInterface {
 	public void createGymCenter() {
 		System.out.println("Gym Center Created");
 	}
