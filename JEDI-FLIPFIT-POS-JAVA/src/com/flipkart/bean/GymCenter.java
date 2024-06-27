@@ -1,81 +1,81 @@
 package com.flipkart.bean;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
- * 
+ *
  */
 public class GymCenter {
-	public int getGymId() {
-		return gymId;
-	}
+    private int gymCenterId;
+    private int gymOwnerId;
+    private String gymCenterName;
+    private String address;
+    private String city;
+    private int price;
+    private int capacity;
+    private ArrayList<Integer> slotListIds;
 
-	public void setGymId(int gymId) {
-		this.gymId = gymId;
-	}
+    public int getGymCenterId() {
+        return gymCenterId;
+    }
 
-	public int getGymOwnerId() {
-		return gymOwnerId;
-	}
+    public void setGymCenterId(int gymCenterId) {
+        this.gymCenterId = gymCenterId;
+    }
 
-	public void setGymOwnerId(int gymOwnerId) {
-		this.gymOwnerId = gymOwnerId;
-	}
+    public int getGymOwnerId() {
+        return gymOwnerId;
+    }
 
-	public String getGymCenterName() {
-		return gymCenterName;
-	}
+    public void setGymOwnerId(int gymOwnerId) {
+        this.gymOwnerId = gymOwnerId;
+    }
 
-	public void setGymCenterName(String gymCenterName) {
-		this.gymCenterName = gymCenterName;
-	}
+    public String getGymCenterName() {
+        return gymCenterName;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setGymCenterName(String gymCenterName) {
+        this.gymCenterName = gymCenterName;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public int getPrice() {
-		return price;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public void setPrice(int price) {
-		this.price = price;
-	}
+    public int getPrice() {
+        return price;
+    }
 
-	public int getCapacity() {
-		return capacity;
-	}
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
-	}
+    public int getCapacity() {
+        return capacity;
+    }
 
-	public List<String> getSlotListIds() {
-		return slotListIds;
-	}
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 
-	public void setSlotListIds(List<String> slotListIds) {
-		this.slotListIds = slotListIds;
-	}
+    public ArrayList<Integer> getSlotListIds() {
+        return slotListIds;
+    }
 
-	private int gymId;
-	private int gymOwnerId;
-	private String gymCenterName;
-	private String address;
-	private String city;
-	private int price;
-	private int capacity;
-	private List<String> slotListIds;
+    public void setSlotListIds(ArrayList<Integer> slotListIds) {
+        this.slotListIds = slotListIds;
+    }
 }
