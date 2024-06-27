@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ae53692d-ba34-4282-a465-3722de7443b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/flipkart/dao/FlipfitGymOwnerDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/flipkart/dao/FlipfitGymOwnerDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/flipkart/dao/FlipfitGymOwnerDAOInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/flipkart/dao/FlipfitGymOwnerDAOInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "git-widget-placeholder": "demo",
     "node.js.selected.package.tslint": "(autodetect)"
   }
