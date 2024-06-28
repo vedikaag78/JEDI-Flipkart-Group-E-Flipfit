@@ -3,10 +3,14 @@
  */
 package com.flipkart.dao;
 
+import com.flipkart.bean.GymOwner;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -55,6 +59,32 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface {
             System.out.println(e);
             return false;
         }
+    }
+
+    public List<GymOwner> viewPendingGymOwnerRequests(){
+        String updateQuery = "SELECT * FROM gymOwners WHERE isVerified = true";
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            PreparedStatement stmt = connection.prepareStatement(updateQuery);
+            ResultSet queryResult = stmt.executeQuery();
+            List<GymOwner> gymOwnerList = new ArrayList<GymOwner>();
+            while(queryResult.next()){
+                GymOwner gymOwner = new GymOwner();
+                gymOwner.setGymOwnerId(queryResult.getInt("gymOwnerId"));
+                gymOwner.setGymOwnerName(queryResult.getString("gymOwnerName"));
+                gymOwner.setGstNumber(queryResult.getString("gstNumber"));
+                gymOwner.setAdharCardNumber(queryResult.getString("adharCardNumber"));
+                gymOwnerList.add(gymOwner);
+            }
+            return gymOwnerList;
+        }catch (Exception e) {
+            System.out.println(e);
+            return null;
+
+        }
+
+
     }
 
 }
