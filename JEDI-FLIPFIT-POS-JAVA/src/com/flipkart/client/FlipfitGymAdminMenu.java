@@ -44,21 +44,20 @@ public class FlipfitGymAdminMenu {
 		System.out.println("WELCOME ADMIN!!");
 
 		while (true) {
-			System.out.println("1. View All GymCenters\n" + "2. View Pending GymOwner Requests\n"
-					+ "3. Approve a GymOwner Request\n" + "4. Go Back To Previous Menu");
+			System.out.println("""
+                    1.Approve a GymOwner Request
+                    2. View Pending GymOwner Requests
+                    3. Go Back To Previous Menu""");
 
 			int pendingChoice = scanner.nextInt();
 			switch (pendingChoice) {
 			case 1:
-				viewApprovedGyms();
+				approveGymOwner();
 				break;
 			case 2:
 				viewPendingGymOwnerRequests();
 				break;
 			case 3:
-				approveGymOwner();
-				break;
-			case 4:
 				System.out.println("\\nGOING BACK TO PREVIOUS MENU\\n");
 				return;
 			default:

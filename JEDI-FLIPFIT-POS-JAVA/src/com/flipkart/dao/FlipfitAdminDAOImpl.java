@@ -56,4 +56,5 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface {
             return false;
         }
     }
+
 }
