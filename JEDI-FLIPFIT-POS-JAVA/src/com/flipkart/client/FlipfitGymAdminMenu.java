@@ -45,7 +45,7 @@ public class FlipfitGymAdminMenu {
 
 		while (true) {
 			System.out.println("""
-                    1.Approve a GymOwner Request
+                    1.Approve GymOwner Requests
                     2. View Pending GymOwner Requests
                     3. Go Back To Previous Menu""");
 
