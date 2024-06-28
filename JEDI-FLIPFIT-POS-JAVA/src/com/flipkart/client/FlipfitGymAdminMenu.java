@@ -3,28 +3,44 @@
  */
 package com.flipkart.client;
 
+import com.flipkart.business.AdminBusiness;
+import com.flipkart.business.GymOwnerBusiness;
+
+import java.util.ArrayList;
+
 import static com.flipkart.client.GymFlipFitApplication.scanner;
 
 /**
  * 
  */
 public class FlipfitGymAdminMenu {
+	private AdminBusiness adminBusiness = new AdminBusiness();
+
+	public void loginAdmin(String email, String password){
+		if (adminBusiness.validateAdmin(email,password)) {
+			System.out.println("Successfully logged in");
+			flipfitGymAdminMainMenu(email);
+		} else {
+			System.out.println("Invalid Credentials");
+		}
+	}
+
 	public static void viewApprovedGyms() {
 		System.out.println("List of all Approved Gyms\n");
 		return;
 	}
 
-	public static void approveGymOwner() {
-		System.out.println("Enter Gym Owner Details\n");
-		String gymId = scanner.next();
-		return;
+	public void approveGymOwner() {
+		System.out.print("Enter Gym Owner Id you want to verify: ");
+		int gymOwnerId = scanner.nextInt();
+		System.out.println(adminBusiness.approveGymOwner(gymOwnerId));
 	}
 
 	public static void viewPendingGymOwnerRequests() {
 		System.out.println("List of all Pending Gyms");
 	}
 
-	public static void flipfitGymAdminMainMenu() {
+	public void flipfitGymAdminMainMenu(String emailId) {
 		System.out.println("WELCOME ADMIN!!");
 
 		while (true) {

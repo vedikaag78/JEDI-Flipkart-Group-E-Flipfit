@@ -2,14 +2,26 @@
  * 
  */
 package com.flipkart.business;
+import com.flipkart.bean.Customer;
+import com.flipkart.dao.FlipfitCustomerDAOImpl;
+import com.flipkart.dao.FlipfitGymOwnerDAOImpl;
 
 /**
  * 
  */
-public class CustomerBusiness {
+public class CustomerBusiness implements CustomerInterface{
+	private FlipfitCustomerDAOImpl customerDAO = new FlipfitCustomerDAOImpl();
 
-	public void createCustomer() {
-		System.out.println("Customer  Created");
+	public int validateGymCustomer(String emailId, String password){
+		return customerDAO.isValidGymCustomer(emailId, password);
+	}
+
+	public Customer getCustomerProfile(int userId){
+		return customerDAO.getCustomerByUserId(userId);
+	}
+
+	public boolean createCustomer(Customer customer) {
+		return customerDAO.createCustomer(customer);
 	}
 
 	public boolean updateCustomer(int customerId) {

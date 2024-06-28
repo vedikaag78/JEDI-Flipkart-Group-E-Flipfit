@@ -16,7 +16,7 @@ public class Customer extends User {
     private String customerAddress;
     private String gender;
     private int age;
-    private int contactNumber;
+    private String contactNumber;
     private String cardDetails;
     private ArrayList<Integer> bookingIdList;
 
@@ -60,11 +60,11 @@ public class Customer extends User {
         this.age = age;
     }
 
-    public int getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 
-    public void setContactNumber(int contactNumber) {
+    public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
     }
 
@@ -82,5 +82,16 @@ public class Customer extends User {
 
     public void setBookingIdList(ArrayList<Integer> bookingIdList) {
         this.bookingIdList = bookingIdList;
+    }
+
+    public void printProfile(){
+        System.out.println("----- YOUR PROFILE -----");
+        System.out.println("Customer Name: " + this.customerName);
+        System.out.println("Customer Address: " + this.customerAddress);
+        System.out.println("Gender: " + this.gender);
+        System.out.println("Age: " + this.age);
+        System.out.println("Contact Number: " + this.contactNumber);
+        System.out.println("Card Details: " + this.cardDetails);
+        System.out.println("------------------------");
     }
 }

@@ -1,11 +1,60 @@
 package com.flipkart.client;
 
+import com.flipkart.bean.GymOwner;
+import com.flipkart.business.AdminBusiness;
+import com.flipkart.business.GymOwnerBusiness;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import static com.flipkart.client.GymFlipFitApplication.scanner;
 
 public class FlipfitGymOwnerMenu {
+	private GymOwnerBusiness gymOwnerBusiness = new GymOwnerBusiness();
+
+	public void loginGymOwner(String email, String password){
+		if (gymOwnerBusiness.validateGymOwner(email,password)) {
+			System.out.println("Successfully logged in");
+			FlipfitGymOwnerMainPage(email);
+		} else {
+			System.out.println("Invalid Credentials");
+		}
+	}
+
+	public boolean registerGymOwner(){
+		GymOwner gymOwner = new GymOwner();
+		System.out.print("Enter your email: ");
+		gymOwner.setEmailId(scanner.next());
+
+		System.out.print("Enter your password: ");
+		gymOwner.setPassword(scanner.next());
+
+		System.out.print("Enter your Name: ");
+		gymOwner.setGymOwnerName(scanner.next());
+
+		System.out.print("Enter your Address: ");
+		gymOwner.setGymOwnerAddress(scanner.next());
+
+		System.out.print("Enter your Gender: ");
+		gymOwner.setGender(scanner.next());
+
+		System.out.print("Enter your Age: ");
+		gymOwner.setAge(scanner.nextInt());
+
+		System.out.print("Enter your contact number: ");
+		gymOwner.setContactNumber(scanner.next());
+
+		System.out.print("Enter your GST Number: ");
+		gymOwner.setGstNumber(scanner.next());
+
+		System.out.print("Enter your Adhar Card Number: ");
+		gymOwner.setAdharCardNumber(scanner.next());
+
+		gymOwner.setVerified(false);
+
+		return gymOwnerBusiness.createGymOwner(gymOwner);
+	}
+
 	public static void FlipfitGymOwnerMainPage(String gymOwnerId) {
 
 		LocalDateTime currentTime = LocalDateTime.now();

@@ -9,9 +9,10 @@ import com.flipkart.bean.Customer;
  * 
  */
 public interface FlipfitCustomerDAOInterface {
-    void registerCustomer(String userName, String password, String email, String phoneNumber, String cardNumber);
+    int isValidGymCustomer(String emailId, String password);
+    boolean createCustomer(Customer newCustomer);
 
-    boolean isCustomerValid(String userName, String password);
+//    boolean isCustomerValid(String email, String password);
 
-    Customer getCustomerById(String userName);
+    Customer getCustomerByUserId(int customerId);
 }

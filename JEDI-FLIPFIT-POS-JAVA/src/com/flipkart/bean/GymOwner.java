@@ -15,7 +15,7 @@ public class GymOwner extends User {
     private String gymOwnerAddress;
     private String gender;
     private int age;
-    private int contactNumber;
+    private String contactNumber;
     private String gstNumber;
     private String adharCardNumber;
     private boolean isVerified;
@@ -61,11 +61,11 @@ public class GymOwner extends User {
         this.age = age;
     }
 
-    public int getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 
-    public void setContactNumber(int contactNumber) {
+    public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
     }
 

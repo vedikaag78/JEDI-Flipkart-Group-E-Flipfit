@@ -3,31 +3,31 @@ package com.flipkart.client;
 import java.util.Scanner;
 
 public class GymFlipFitApplication {
-
     static Scanner scanner = new Scanner(System.in);
+    private static FlipfitGymAdminMenu flipfitGymAdminMenu = new FlipfitGymAdminMenu();
+    private static FlipfitGymOwnerMenu flipfitGymOwnerMenu = new FlipfitGymOwnerMenu();
+    private static FlipfitGymCustomerMenu flipfitGymCustomerMenu = new FlipfitGymCustomerMenu();
 
     public static void loginUser() {
-        System.out.print("Enter your userName: ");
-        String name = scanner.next();
+        System.out.println("---- ENTER LOGIN DETAILS ---");
+        System.out.print("Enter your email: ");
+        String email = scanner.next();
 
-        System.out.println("userName: " + name);
         System.out.print("Enter your password: ");
         String password = scanner.next();
-        System.out.println("password: " + password);
 
         System.out.print("Enter your role: ");
-        String role = scanner.next();
-        System.out.println("Role: " + role);
+        String roleName = scanner.next();
 
-        switch (role) {
+        switch (roleName) {
             case "Admin":
-                FlipfitGymAdminMenu.flipfitGymAdminMainMenu();
+                flipfitGymAdminMenu.loginAdmin(email, password);
                 break;
             case "GymOwner":
-                FlipfitGymOwnerMenu.FlipfitGymOwnerMainPage("101");
+                flipfitGymOwnerMenu.loginGymOwner(email, password);
                 break;
             case "Customer":
-                FlipfitGymCustomerMenu.flipfitGymCustomerMainMenu("101");
+                flipfitGymCustomerMenu.loginGymCustomer(email, password);
                 break;
             default:
                 System.out.println("Please enter the Role in the CamelCase again");
@@ -36,11 +36,13 @@ public class GymFlipFitApplication {
     }
 
     public static void registerAsCustomer() {
-        System.out.println("Register as Customer ==> Enter Details");
+     if(flipfitGymCustomerMenu.registerCustomer()) loginUser();
+     else System.out.println("Failed to Register");
     }
 
     public static void registerAsGymOwner() {
-        System.out.println("Register as Gym Owner ==> Enter Details");
+        if(flipfitGymOwnerMenu.registerGymOwner()) loginUser();
+        else System.out.println("Failed to Register");
     }
 
     public static void changePassword() {
