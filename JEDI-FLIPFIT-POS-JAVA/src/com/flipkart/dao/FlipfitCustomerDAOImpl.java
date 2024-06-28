@@ -34,32 +34,6 @@ public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
 
 
 
-//    public static String getUserRole(String emailId, String password){
-//        String roleName = "";
-//        try {
-//            Class.forName("com.mysql.jdbc.Driver");
-//            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
-//
-//            PreparedStatement getUserRoleStmt = connection.prepareStatement(
-//                    "SELECT r.roleName, r.roleDescription " +
-//                            "FROM user u " +
-//                            "JOIN role r ON u.roleId = r.roleId " +
-//                            "WHERE u.emailId = ? AND u.password = ?");
-//
-//            getUserRoleStmt.setString(1, emailId);
-//            getUserRoleStmt.setString(2, password);
-//
-//            ResultSet queryResult = getUserRoleStmt.executeQuery();
-//
-//            roleName = (queryResult.next() ? queryResult.getString("roleName"):"");
-//            connection.close();
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//
-//        return roleName;
-//    }
-
     public boolean createCustomer(Customer newCustomer) {
         try {
             Class.forName("com.mysql.jdbc.Driver");

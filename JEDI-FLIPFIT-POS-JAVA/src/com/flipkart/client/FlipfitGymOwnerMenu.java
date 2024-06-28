@@ -1,11 +1,14 @@
 package com.flipkart.client;
 
+import com.flipkart.bean.GymCenter;
 import com.flipkart.bean.GymOwner;
 import com.flipkart.business.AdminBusiness;
+import com.flipkart.business.GymCenterBusiness;
 import com.flipkart.business.GymOwnerBusiness;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import static com.flipkart.client.GymFlipFitApplication.scanner;
 
@@ -13,9 +16,10 @@ public class FlipfitGymOwnerMenu {
 	private GymOwnerBusiness gymOwnerBusiness = new GymOwnerBusiness();
 
 	public void loginGymOwner(String email, String password){
-		if (gymOwnerBusiness.validateGymOwner(email,password)) {
-			System.out.println("Successfully logged in");
-			FlipfitGymOwnerMainPage(email);
+		int gymOwnerId = gymOwnerBusiness.validateGymOwner(email,password);
+		if (gymOwnerId > 0) {
+			System.out.println("Successfully Logged In");
+			FlipfitGymOwnerMainPage(email, gymOwnerId);
 		} else {
 			System.out.println("Invalid Credentials");
 		}
@@ -55,12 +59,25 @@ public class FlipfitGymOwnerMenu {
 		return gymOwnerBusiness.createGymOwner(gymOwner);
 	}
 
-	public static void FlipfitGymOwnerMainPage(String gymOwnerId) {
+	public void viewAllGymCenters(int gymCenterId){
+		List<GymCenter> gymCenterList = gymOwnerBusiness.getAllGymCenterByGymOwnerId(gymCenterId);
+		int i = 1;
+
+		System.out.println("List of all your registered Gym Centers");
+		for (GymCenter gymCenter: gymCenterList) {
+			System.out.println(i + ". " + gymCenter.getGymCenterName() + " - " + gymCenter.getCity());
+			i++;
+		}
+		System.out.println("---------------------------------------\n" +
+				"---------------------------------------");
+	}
+
+	public void FlipfitGymOwnerMainPage(String email, int gymOwnerId) {
 
 		LocalDateTime currentTime = LocalDateTime.now();
 		DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		String formattedDate = currentTime.format(myFormat);
-		System.out.println("WELCOME " + gymOwnerId + "!! " + formattedDate + "\nWhat do you want to do");
+		System.out.println("WELCOME " + email + "!! " + formattedDate + "\nWhat do you want to do");
 
 		while (true) {
 			System.out.println("" + "1. View all my Gym Centres\n" + "2. Sending Gym Owner Approval Request\n"
@@ -68,7 +85,7 @@ public class FlipfitGymOwnerMenu {
 			int choice = scanner.nextInt();
 			switch (choice) {
 			case 1:
-				System.out.println("Viewing All Gym Centers...");
+				viewAllGymCenters(gymOwnerId);
 				break;
 			case 2:
 				System.out.println("Requesting Gym Owner Approval...");
@@ -76,6 +93,7 @@ public class FlipfitGymOwnerMenu {
 				break;
 
 			case 3:
+				System.out.println("---- Enter Gym Center Details ----");
 				System.out.println("Enter gym centre id: ");
 				String gymId = scanner.next();
 
