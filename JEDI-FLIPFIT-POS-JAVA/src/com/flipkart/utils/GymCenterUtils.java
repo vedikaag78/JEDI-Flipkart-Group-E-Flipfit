@@ -16,7 +16,7 @@ public class GymCenterUtils {
                     "Center City: " + gymCenter.getCity());
             i++;
         }
-        System.out.println("--------------------------------------------\n");
+        System.out.println("--------------------------------------------");
     }
 
     public static void printGymCenterSlotList(List<Slot> slotList){

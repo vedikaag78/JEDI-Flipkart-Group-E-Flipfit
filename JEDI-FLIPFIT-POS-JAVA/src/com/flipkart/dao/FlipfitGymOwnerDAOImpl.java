@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.*;
 
 /**
- * 
+ *
  */
 public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
     public int isValidGymOwner(String emailId, String password){

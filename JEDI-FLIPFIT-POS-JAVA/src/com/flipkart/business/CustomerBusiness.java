@@ -2,18 +2,12 @@
  * 
  */
 package com.flipkart.business;
-import com.flipkart.bean.Booking;
-import com.flipkart.bean.Customer;
-import com.flipkart.bean.GymCenter;
-import com.flipkart.bean.Schedule;
+import com.flipkart.bean.*;
 import com.flipkart.dao.FlipfitCustomerDAOImpl;
 import com.flipkart.dao.FlipfitGymBookingDAOImpl;
 import com.flipkart.dao.FlipfitGymCenterDAOImpl;
-import com.flipkart.dao.FlipfitGymOwnerDAOImpl;
 import com.flipkart.utils.GymCenterUtils;
 
-import java.awt.print.Book;
-import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -47,7 +41,7 @@ public class CustomerBusiness implements CustomerInterface{
 
 //	public boolean checkForAvailablity(int scheduleId){
 //		if(scheduleId==-1) return false;
-////		return (bookingDAO.getAvailableSeats(scheduleId) > 0);
+//		return (bookingDAO.getAvailableSeats(scheduleId) > 0);
 //		return true;
 //	}
 
@@ -58,17 +52,30 @@ public class CustomerBusiness implements CustomerInterface{
 			bookingDAO.createSchedule(schedule, capacity);
 		}
 
-//		int scheduleId = bookingDAO.getScheduleId(schedule);
-//
-//		if(!checkForAvailablity(scheduleId)) {
-//			return false;
-//		}
-//		bookingDAO.decrementeAvailableSeat(scheduleId);
-//		Booking booking = new Booking();
-//		booking.setCustomerId(customerId);
-//		booking.setScheduleId(scheduleId);
-//		bookingDAO.createBooking();
-		return true;
+		int scheduleId = bookingDAO.getScheduleId(schedule);
+		System.out.println(scheduleId);
+		if(scheduleId == -1 || !bookingDAO.decrementAvailableSeat(scheduleId)) return false;
+
+		Booking booking = new Booking();
+		booking.setCustomerId(customerId);
+		booking.setScheduleId(scheduleId);
+		return bookingDAO.createBooking(booking);
+	}
+
+	public void viewAllBookings(int customerId){
+		List<Booking> bookingList = bookingDAO.getAllBookingsByCustomerId(customerId);
+		System.out.println("--------------------------------------------");
+		int i = 1;
+		for(Booking booking:bookingList){
+			Schedule schedule = bookingDAO.getBookingSchedule(booking);
+			Slot slot = bookingDAO.getBookingSlot(schedule);
+			System.out.println(i + ". " + "Date: " + schedule.getScheduleDate() +
+					"\t\tbookingId: " + booking.getBookingId() +
+					"\t\tstart time: " + slot.getStartTime() +
+					"\t\tend time: " + slot.getEndTime() +
+					"\t\tcenterId: " + schedule.getGymCenterId());
+		}
+		System.out.println("--------------------------------------------");
 	}
 
 	public boolean updateCustomer(int customerId) {

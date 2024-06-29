@@ -9,6 +9,7 @@ public class GymFlipFitApplication {
     private static FlipfitGymCustomerMenu flipfitGymCustomerMenu = new FlipfitGymCustomerMenu();
 
     public static void loginUser() {
+        System.out.println("--------------------------------------------");
         System.out.println("---- ENTER LOGIN DETAILS ---");
         System.out.print("Enter your email: ");
         String email = scanner.next();
@@ -52,9 +53,15 @@ public class GymFlipFitApplication {
     public static void main(String[] args) {
         boolean menuStatus = true;
         while (menuStatus) {
-            System.out.println("--------Welcome to Flipfit App-------- ");
-            System.out.println("" + "1. Login\n" + "2. Register as Customer\n" + "3. Register as Gym Owner\n"
-                    + "4. Change Password\n" + "5. Exit\n");
+            System.out.println("""
+                --------------------------------------------
+                -----------Welcome to Flipfit App-----------
+                    1. Login
+                    2. Register as Customer
+                    3. Register as Gym Owner
+                    4. Change Password
+                    5. Exit
+                --------------------------------------------""");
 
             int choice = scanner.nextInt();
             switch (choice) {

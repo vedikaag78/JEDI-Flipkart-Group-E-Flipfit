@@ -75,15 +75,14 @@ public class FlipfitGymCustomerMenu {
 		System.out.println("Select a slot Id: ");
 		schedule.setSlotId(scanner.nextInt());
 		schedule.setScheduleDate(LocalDate.now());
-		customerBusiness.bookSlot(schedule, customerId);
+		if(customerBusiness.bookSlot(schedule, customerId))
+			System.out.println("Booking Successful");
+		else System.out.println("Booking Failed");
+		System.out.println("--------------------------------------------");
 	}
 
-	private static void viewAllBookings() {
-		System.out.println("Viewing all bookings...");
-	}
-
-	private static void cancleBooking() {
-		System.out.println("Cancle Booking...");
+	private void viewAllBookings(int customerId) {
+		customerBusiness.viewAllBookings(customerId);
 	}
 
 	public void flipfitGymCustomerMainMenu(String email, int customerId) {
@@ -93,15 +92,14 @@ public class FlipfitGymCustomerMenu {
 		String formattedDate = currentTime.format(myFormat);
 		while (true) {
 			System.out.println("--------------------------------------------");
-			System.out.println("WELCOME " + email + "!! " + formattedDate);
+			System.out.println("WELCOME Customer - " + email + "!! " + formattedDate);
 			System.out.println("What do you want to do?");
-			System.out.print("""
-					1. View My Profile
-					2. Book a slot in a Gym
-					3. View Bookings
-					4. Go Back to previous menu
-					""");
-			System.out.println("--------------------------------------------");
+			System.out.println("""
+						1. View My Profile
+						2. Book a slot in a Gym
+						3. View Booking
+						4. Go Back to previous menu
+					--------------------------------------------""");
 
 			int choice = scanner.nextInt();
 			switch (choice) {
@@ -112,10 +110,9 @@ public class FlipfitGymCustomerMenu {
 				bookFlipfitGymSlot(customerId);
 				break;
 			case 3:
-				viewAllBookings();
+				viewAllBookings(customerId);
 				break;
 			case 4:
-				System.out.println("\\nGOING BACK TO PREVIOUS MENU\\n");
 				return;
 			default:
 				System.out.println("PLEASE CHOOSE A VALID OPTION");

@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae53692d-ba34-4282-a465-3722de7443b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/flipkart/utils/GymCenterUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/bean/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/bean/Slot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/CustomerBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/CustomerBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/GymOwnerBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/GymOwnerBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/utils/GymCenterUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/utils/GymCenterUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

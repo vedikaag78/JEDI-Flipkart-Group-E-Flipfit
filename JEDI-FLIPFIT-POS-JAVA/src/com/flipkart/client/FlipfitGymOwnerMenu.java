@@ -72,11 +72,12 @@ public class FlipfitGymOwnerMenu {
 			> Enter Details Following Details to add Slots
 			> Enter Center Id of the Slots to be Added: """);
 		centerSlot.setGymCenterId(scanner.nextInt());
-		System.out.print("> Enter Slot Start Time: (24hr Format): ");
+		System.out.print("> Enter Slot Start Time: (HH:MM in 24hr Format): ");
 		centerSlot.setStartTime(scanner.next());
-		System.out.print("> Enter Slot End Time: (24hr Format): ");
+		System.out.print("> Enter Slot End Time: (HH:MM in 24hr Format): ");
 		centerSlot.setEndTime(scanner.next());
 		gymOwnerBusiness.addSlotWithGymID(centerSlot);
+		System.out.println("Slot Successfully Created");
 		System.out.println("--------------------------------------------");
 	}
 
@@ -85,14 +86,14 @@ public class FlipfitGymOwnerMenu {
 		DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		String formattedDate = currentTime.format(myFormat);
 		while (true) {
-			System.out.println("\n--------------------------------------------");
-			System.out.println("WELCOME " + email + "!! " + formattedDate + "\nWhat do you want to do?");
+			System.out.println("--------------------------------------------");
+			System.out.println("WELCOME Gym Owner - " + email + "!! " + formattedDate + "\nWhat do you want to do?");
 			System.out.println("""
 					1. View all my Gym Centres
 					2. Add a new Gym Center
 					3. Add Slots to a Gym Centre
-					4. Go Back to Previous Menu""");
-			System.out.println("--------------------------------------------\n");
+					4. Go Back to Previous Menu
+				--------------------------------------------""");
 
 			int choice = scanner.nextInt();
 			switch (choice) {
@@ -100,7 +101,7 @@ public class FlipfitGymOwnerMenu {
 				viewAllGymCenters(gymOwnerId);
 				break;
 			case 2:
-				System.out.println("---- Enter Gym Center Details ----");
+				System.out.println("-----Enter Gym Center Details-----");
 				System.out.println("Enter gym centre id: ");
 				String gymId = scanner.next();
 

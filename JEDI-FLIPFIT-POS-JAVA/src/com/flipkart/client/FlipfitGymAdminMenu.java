@@ -7,6 +7,8 @@ import com.flipkart.bean.GymOwner;
 import com.flipkart.business.AdminBusiness;
 import com.flipkart.business.GymOwnerBusiness;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,13 +55,17 @@ public class FlipfitGymAdminMenu {
 	}
 
 	public void flipfitGymAdminMainMenu(String emailId) {
-		System.out.println("WELCOME ADMIN!!");
-
+		LocalDateTime currentTime = LocalDateTime.now();
+		DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+		String formattedDate = currentTime.format(myFormat);
 		while (true) {
+			System.out.println("--------------------------------------------");
+			System.out.println("WELCOME Admin - " + emailId + "!! " + formattedDate + "\nWhat do you want to do?");
 			System.out.println("""
-                    1. Approve GymOwner Requests
-                    2. View Pending GymOwner Requests
-                    3. Go Back To Previous Menu""");
+							1. Approve GymOwner Requests
+							2. View Pending GymOwner Requests
+							3. Go Back To Previous Menu
+						-------------------------------------------""");
 
 			int pendingChoice = scanner.nextInt();
 			switch (pendingChoice) {
