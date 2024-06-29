@@ -6,6 +6,6 @@ package com.flipkart.exception;
 /**
  * 
  */
-public class Exception {
+public class BookingCancellationFailedException {
 
 }

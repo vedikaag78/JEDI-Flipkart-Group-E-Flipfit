@@ -1,9 +1,9 @@
 package com.flipkart.utils;
 
-import com.flipkart.bean.GymCenter;
 import com.flipkart.bean.Slot;
 
 import java.util.List;
+import com.flipkart.bean.*;
 
 public class GymCenterUtils {
     public static void printGymCenterList(List<GymCenter> gymCenterList){
