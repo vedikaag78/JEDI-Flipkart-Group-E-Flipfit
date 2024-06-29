@@ -3,10 +3,12 @@
  */
 package com.flipkart.client;
 
+import com.flipkart.bean.GymOwner;
 import com.flipkart.business.AdminBusiness;
 import com.flipkart.business.GymOwnerBusiness;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.flipkart.client.GymFlipFitApplication.scanner;
 
@@ -36,8 +38,18 @@ public class FlipfitGymAdminMenu {
 		System.out.println(adminBusiness.approveGymOwner(gymOwnerId));
 	}
 
-	public static void viewPendingGymOwnerRequests() {
-		System.out.println("List of all Pending Gyms");
+	public void viewPendingGymOwnerRequests() {
+		List<GymOwner> pendingGymOwnerList = adminBusiness.viewPendingGymOwners();
+		System.out.println("--------------------------------------------");
+		System.out.println("Pending Approval Gym Owner List: ");
+		for (GymOwner gymOwner : pendingGymOwnerList) {
+			System.out.println(gymOwner.getGymOwnerId() + ". " +
+					"Name->" + gymOwner.getGymOwnerName() + "\t\t" +
+					"GST Number->" + gymOwner.getGstNumber() + "\t\t" +
+					"Adhar Card Number->" + gymOwner.getAdharCardNumber() + "\t\t" +
+					"Contact Details->" + gymOwner.getContactNumber());
+		}
+		System.out.println("--------------------------------------------\n");
 	}
 
 	public void flipfitGymAdminMainMenu(String emailId) {
@@ -45,7 +57,7 @@ public class FlipfitGymAdminMenu {
 
 		while (true) {
 			System.out.println("""
-                    1.Approve GymOwner Requests
+                    1. Approve GymOwner Requests
                     2. View Pending GymOwner Requests
                     3. Go Back To Previous Menu""");
 

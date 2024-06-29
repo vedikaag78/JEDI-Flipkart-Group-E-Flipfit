@@ -3,15 +3,36 @@ package com.flipkart.dao;
 /**
  * 
  */
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import com.flipkart.bean.Slot;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
+
+//    public boolean addSlotWithGymID(Slot slot, int centerId){
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+//
+//            PreparedStatement getSlotId = connection.prepareStatement(
+//                    "SELECT INSERT INTO slots(gymOwner, end_time)\n" +
+//                            "VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
+//
+//            getGymOwnerIdStmt.setInt(1, userId);
+//
+//            ResultSet queryResult = getGymOwnerIdStmt.executeQuery();
+//
+//            gymOwnerId = (queryResult.next() ? queryResult.getInt("gymOwnerId"):-1);
+//            connection.close();
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//
+//        return gymOwnerId;
+//    }
+
 
     private Connection con;
 

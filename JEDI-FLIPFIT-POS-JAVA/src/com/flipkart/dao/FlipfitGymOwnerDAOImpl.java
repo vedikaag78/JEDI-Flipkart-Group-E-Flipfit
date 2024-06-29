@@ -3,22 +3,24 @@
  */
 package com.flipkart.dao;
 
+import com.flipkart.bean.GymCenter;
 import com.flipkart.bean.GymOwner;
 
 import java.sql.*;
+import java.util.*;
 
 /**
  * 
  */
 public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
-    public boolean isValidGymOwner(String emailId, String password){
-        String roleName = "";
+    public int isValidGymOwner(String emailId, String password){
+        int userId = -1;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
 
             PreparedStatement getUserRoleStmt = connection.prepareStatement(
-                    "SELECT r.roleName, r.roleDescription " +
+                    "SELECT r.roleName, u.userId " +
                             "FROM users u " +
                             "JOIN roles r ON u.roleId = r.roleId " +
                             "WHERE u.emailId = ? AND u.password = ?");
@@ -28,13 +30,35 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
 
             ResultSet queryResult = getUserRoleStmt.executeQuery();
 
-            roleName = (queryResult.next() ? queryResult.getString("roleName"):"");
+            String roleName = (queryResult.next() ? queryResult.getString("roleName"):"");
+            if(roleName.equals("GymOwner")) userId = queryResult.getInt("userId");
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return userId;
+    }
+
+    public int getGymOwnerId(int userId){
+        int gymOwnerId = -1;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+
+            PreparedStatement getGymOwnerIdStmt = connection.prepareStatement(
+                    "SELECT gymOwnerId FROM GymOwners WHERE userId = ?;");
+
+            getGymOwnerIdStmt.setInt(1, userId);
+
+            ResultSet queryResult = getGymOwnerIdStmt.executeQuery();
+
+            gymOwnerId = (queryResult.next() ? queryResult.getInt("gymOwnerId"):-1);
             connection.close();
         } catch (Exception e) {
             System.out.println(e);
         }
 
-        return roleName.equals("GymOwner");
+        return gymOwnerId;
     }
 
     public boolean createGymOwner(GymOwner gymOwner){
@@ -86,4 +110,36 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
         }
     }
 
+    public List<GymCenter> getAllGymCenterByGymOwnerId(int gymOwnerId){
+        List<GymCenter> gymCenterList = new ArrayList<>();
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+
+            PreparedStatement getGymCenterStmt = connection.prepareStatement(
+                    "SELECT * FROM gymCenters WHERE gymOwnerId = ?;");
+
+            getGymCenterStmt.setInt(1,gymOwnerId);
+
+            ResultSet queryResult = getGymCenterStmt.executeQuery();
+            while (queryResult.next()) {
+                GymCenter gymCenter = new GymCenter();
+                gymCenter.setGymCenterId(queryResult.getInt("gymCenterId"));
+                gymCenter.setGymOwnerId(queryResult.getInt("gymOwnerId"));
+                gymCenter.setGymCenterName(queryResult.getString("gymCenterName"));
+                gymCenter.setAddress(queryResult.getString("address"));
+                gymCenter.setCapacity(queryResult.getInt("capacity"));
+                gymCenter.setPrice(queryResult.getInt("price"));
+                gymCenter.setCity(queryResult.getString("city"));
+                gymCenterList.add(gymCenter);
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+
+        return gymCenterList;
+    }
 }

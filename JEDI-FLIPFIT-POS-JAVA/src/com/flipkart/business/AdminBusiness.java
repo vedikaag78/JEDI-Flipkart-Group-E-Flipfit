@@ -1,5 +1,6 @@
 package com.flipkart.business;
 
+import com.flipkart.bean.GymOwner;
 import com.flipkart.dao.FlipfitAdminDAOImpl;
 
 import java.util.List;
@@ -19,14 +20,13 @@ public class AdminBusiness implements AdminInterface {
 		System.out.println("List of Approved Gym Owners");
 		return ;
 	}
-	public void viewPendingGymOwners(List<String> pendingGymOwnerIds) {
-		System.out.println("List of Pending Gyms");
-		return ;
+
+	public List<GymOwner> viewPendingGymOwners() {
+		return adminDAO.viewPendingGymOwnerRequests();
 	}
+
 	public void cancelApprovedGymOwner(String gymID) {
 		System.out.println("List of Pending Gyms");
 		return ;
 	}
-	
-
 }

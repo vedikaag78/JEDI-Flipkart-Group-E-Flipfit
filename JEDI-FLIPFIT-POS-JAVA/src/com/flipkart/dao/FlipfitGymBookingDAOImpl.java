@@ -98,8 +98,8 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             if (rs.next()) {
                 slot = new Slot();
                 slot.setSlotId(rs.getInt("slotId"));
-                slot.setStartTime(rs.getTime("startTime").toLocalTime());
-                slot.setEndTime(rs.getTime("endTime").toLocalTime());
+                slot.setStartTime(rs.getString("startTime"));
+                slot.setEndTime(rs.getString("endTime"));
             }
         } finally {
             // Close resources
