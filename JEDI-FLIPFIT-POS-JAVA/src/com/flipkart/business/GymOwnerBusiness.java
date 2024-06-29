@@ -31,10 +31,9 @@ public class GymOwnerBusiness implements GymOwnerInterface {
 		return gymOwnerDAO.getAllGymCenterByGymOwnerId(gymOwnerId);
 	}
 
-//	public boolean addSlotWithGymID(Slot slot, int centerId){
-//		return gymCenterDAO.addSlotWithGymID(slot, centerId);
-//		return true;
-//	}
+	public boolean addSlotWithGymID(Slot slot){
+		return gymCenterDAO.addSlotWithGymID(slot);
+	}
 
 	public boolean updateGymOwner(int gymOwnerId) {
 		System.out.println("Gym Owner Updated ==> " + gymOwnerId);

@@ -32,7 +32,27 @@ public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
         return userId;
     }
 
+    public int getCustomerId(int userId){
+        int customerId = -1;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
 
+            PreparedStatement getGymOwnerIdStmt = connection.prepareStatement(
+                    "SELECT * FROM customers WHERE userId = ?;");
+
+            getGymOwnerIdStmt.setInt(1, userId);
+
+            ResultSet queryResult = getGymOwnerIdStmt.executeQuery();
+
+            customerId = (queryResult.next() ? queryResult.getInt("customerId"):-1);
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return customerId;
+    }
 
     public boolean createCustomer(Customer newCustomer) {
         try {
@@ -79,13 +99,13 @@ public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
         }
     }
 
-    public Customer getCustomerByUserId(int userId) {
+    public Customer getCustomerByCustomerId(int userId) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
 
             PreparedStatement getCustomerByIdStmt = connection.prepareStatement(
-                    "SELECT * FROM customers WHERE userId = ?");
+                    "SELECT * FROM customers WHERE customerId = ?");
 
             getCustomerByIdStmt.setInt(1, userId);
 

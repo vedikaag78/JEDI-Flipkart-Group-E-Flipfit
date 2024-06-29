@@ -11,6 +11,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.flipkart.bean.Schedule;
 import com.flipkart.bean.Slot;
 
 public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
@@ -19,94 +20,49 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "Fk!@#%215040";
 
-    @Override
-    public List<Object> findSlotsbygymId(int id) {
-        List<Object> slots = new ArrayList<>();
-        Connection conn = null;
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-
+    public boolean checkSchedule(Schedule schedule){
+        boolean isPresent = false;
         try {
-            // Step 1: Register JDBC driver (not needed for newer JDBC versions)
-            // Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
 
-            // Step 2: Open a connection
-            conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            PreparedStatement checkForScheduleStmt = connection.prepareStatement(
+                    "SELECT COUNT(*) AS cnt FROM schedules WHERE slotId = ? AND scheduleDate = ?;");
 
-            // Step 3: Prepare SQL statement to fetch gymCenter data
-            String sql = "SELECT * FROM GymCenter WHERE gymCenterId = ?";
-            stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, id);
+            checkForScheduleStmt.setInt(1, schedule.getSlotId());
+            checkForScheduleStmt.setDate(2, Date.valueOf(schedule.getScheduleDate()));
 
-            // Step 4: Execute query and process result set
-            rs = stmt.executeQuery();
-            if (rs.next()) {
-                // Retrieve slotListIds from GymCenter
-                ArrayList<Integer> slotIds = deserializeSlotIds(rs.getString("slotListIds"));
-                
-                // Step 5: Fetch Slot objects corresponding to slotIds
-                for (Integer slotId : slotIds) {
-                    Slot slot = findSlotById(conn, slotId);
-                    if (slot != null) {
-                        slots.add(slot);
-                    }
-                }
-            }
+            ResultSet queryResult = checkForScheduleStmt.executeQuery();
 
-        } catch (SQLException e) {
-            e.printStackTrace(); // Handle exceptions properly in a real application
-        } finally {
-            // Step 6: Close resources
-            try {
-                if (rs != null) rs.close();
-                if (stmt != null) stmt.close();
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if(queryResult.next()) isPresent = queryResult.getInt("cnt")>0;
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
         }
-
-        return slots;
+        return isPresent;
     }
 
-    // Helper method to deserialize slotListIds stored as a string in the database
-    private ArrayList<Integer> deserializeSlotIds(String slotListIdsString) {
-        ArrayList<Integer> slotIds = new ArrayList<>();
-        if (slotListIdsString != null && !slotListIdsString.isEmpty()) {
-            String[] parts = slotListIdsString.split(",");
-            for (String part : parts) {
-                slotIds.add(Integer.parseInt(part.trim()));
-            }
-        }
-        return slotIds;
-    }
 
-    // Helper method to find Slot by slotId
-    private Slot findSlotById(Connection conn, int slotId) throws SQLException {
-        Slot slot = null;
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-
+    public boolean createSchedule(Schedule schedule, int availableSeats){
         try {
-            // Prepare SQL statement to fetch slot details
-            String sql = "SELECT * FROM Slot WHERE slotId = ?";
-            stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, slotId);
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
 
-            // Execute query and process result set
-            rs = stmt.executeQuery();
-            if (rs.next()) {
-                slot = new Slot();
-                slot.setSlotId(rs.getInt("slotId"));
-                slot.setStartTime(rs.getString("startTime"));
-                slot.setEndTime(rs.getString("endTime"));
-            }
-        } finally {
-            // Close resources
-            if (rs != null) rs.close();
-            if (stmt != null) stmt.close();
+            PreparedStatement createScheduleStmt = connection.prepareStatement(
+                    "INSERT INTO schedules (gymCenterId, slotId, ScheduleDate, availability)\n" +
+                            "VALUES (?, ?, ?, ?);");
+
+            createScheduleStmt.setInt(1, schedule.getGymCenterId());
+            createScheduleStmt.setInt(2, schedule.getSlotId());
+            createScheduleStmt.setDate(3, Date.valueOf(schedule.getScheduleDate()));
+            createScheduleStmt.setInt(4, availableSeats);
+
+            createScheduleStmt.executeUpdate();
+            connection.close();
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
         }
-
-        return slot;
     }
 }

@@ -33,7 +33,12 @@ public class Slot {
         this.endTime = endTime;
     }
 
+    public int getGymCenterId() { return gymCenterId; }
+
+    public void setGymCenterId(int gymCenterId) { this.gymCenterId = gymCenterId; }
+
     private int slotId;
+    private int gymCenterId;
     private String startTime;
     private String endTime;
 }

@@ -14,5 +14,5 @@ public interface FlipfitCustomerDAOInterface {
 
 //    boolean isCustomerValid(String email, String password);
 
-    Customer getCustomerByUserId(int customerId);
+    Customer getCustomerByCustomerId(int customerId);
 }

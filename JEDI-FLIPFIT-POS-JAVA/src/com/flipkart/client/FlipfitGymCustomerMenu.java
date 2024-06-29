@@ -3,11 +3,14 @@
  */
 package com.flipkart.client;
 
+import com.flipkart.bean.Booking;
 import com.flipkart.bean.Customer;
 import com.flipkart.bean.GymOwner;
+import com.flipkart.bean.Schedule;
 import com.flipkart.business.CustomerBusiness;
 import com.flipkart.business.GymOwnerBusiness;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -20,10 +23,10 @@ public class FlipfitGymCustomerMenu {
 	private CustomerBusiness customerBusiness = new CustomerBusiness();
 
 	public void loginGymCustomer(String email, String password){
-		int userId = customerBusiness.validateGymCustomer(email,password);
-		if (userId > 0) {
+		int customerId = customerBusiness.validateGymCustomer(email,password);
+		if (customerId > 0) {
 			System.out.println("Successfully Logged In");
-			flipfitGymCustomerMainMenu(email, userId);
+			flipfitGymCustomerMainMenu(email, customerId);
 		} else {
 			System.out.println("Invalid Credentials");
 		}
@@ -58,13 +61,21 @@ public class FlipfitGymCustomerMenu {
 		return customerBusiness.createCustomer(customer);
 	}
 
-	private void viewCustomerProfile(int userId) {
-		Customer customer = customerBusiness.getCustomerProfile(userId);
+	private void viewCustomerProfile(int customerId) {
+		Customer customer = customerBusiness.getCustomerProfile(customerId);
 		customer.printProfile();
 	}
 
-	private static void bookFlipfitGymSlot() {
-		System.out.println("booking Flipfit Gym Slot...");
+	private void bookFlipfitGymSlot(int customerId) {
+		customerBusiness.viewAllGym();
+		Schedule schedule = new Schedule();
+		System.out.print("Select a center Id to book a slot: ");
+		schedule.setGymCenterId(scanner.nextInt());
+		customerBusiness.viewAllSlotByGymCenterId(schedule.getGymCenterId());
+		System.out.println("Select a slot Id: ");
+		schedule.setSlotId(scanner.nextInt());
+		schedule.setScheduleDate(LocalDate.now());
+		customerBusiness.bookSlot(schedule, customerId);
 	}
 
 	private static void viewAllBookings() {
@@ -75,31 +86,35 @@ public class FlipfitGymCustomerMenu {
 		System.out.println("Cancle Booking...");
 	}
 
-	public void flipfitGymCustomerMainMenu(String email, int userId) {
+	public void flipfitGymCustomerMainMenu(String email, int customerId) {
 
 		LocalDateTime currentTime = LocalDateTime.now();
 		DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		String formattedDate = currentTime.format(myFormat);
-		System.out.println("\nWELCOME " + email + "!! " + formattedDate + "\nWhat do you want to do??");
 		while (true) {
-			System.out.println("1. View My Profile\n" + "2. Book a slot in a Gym\n" + "3. View Bookings\n"
-					+ "4. Cancel Bookings\n" + "5. Go Back to previous menu");
+			System.out.println("--------------------------------------------");
+			System.out.println("WELCOME " + email + "!! " + formattedDate);
+			System.out.println("What do you want to do?");
+			System.out.print("""
+					1. View My Profile
+					2. Book a slot in a Gym
+					3. View Bookings
+					4. Go Back to previous menu
+					""");
+			System.out.println("--------------------------------------------");
 
 			int choice = scanner.nextInt();
 			switch (choice) {
 			case 1:
-				viewCustomerProfile(userId);
+				viewCustomerProfile(customerId);
 				break;
 			case 2:
-				bookFlipfitGymSlot();
+				bookFlipfitGymSlot(customerId);
 				break;
 			case 3:
 				viewAllBookings();
 				break;
 			case 4:
-				cancleBooking();
-				break;
-			case 5:
 				System.out.println("\\nGOING BACK TO PREVIOUS MENU\\n");
 				return;
 			default:
