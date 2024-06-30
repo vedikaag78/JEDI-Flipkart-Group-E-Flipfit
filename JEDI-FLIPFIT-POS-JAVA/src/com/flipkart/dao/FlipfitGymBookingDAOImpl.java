@@ -15,11 +15,6 @@ import com.flipkart.bean.Schedule;
 import com.flipkart.bean.Slot;
 
 public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
-
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/flipfit_schema";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Fk!@#%215040";
-
     public boolean checkSchedule(Schedule schedule){
         boolean isPresent = false;
         try {
@@ -37,7 +32,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             if(queryResult.next()) isPresent = queryResult.getInt("cnt")>0;
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return isPresent;
     }
@@ -56,11 +51,11 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             createScheduleStmt.setDate(3, Date.valueOf(schedule.getScheduleDate()));
             createScheduleStmt.setInt(4, availableSeats);
 
-            createScheduleStmt.executeUpdate();
+            int rowsAffected = createScheduleStmt.executeUpdate();
             connection.close();
-            return true;
+            return (rowsAffected > 0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }
@@ -81,7 +76,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             if(queryResult.next()) scheduleId = queryResult.getInt("scheduleId");
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return scheduleId;
     }
@@ -107,7 +102,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return bookingList;
     }
@@ -132,7 +127,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return schedule;
     }
@@ -155,7 +150,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return slot;
     }
@@ -172,7 +167,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             int rowsAffected = decrementAvailableSeatStmt.executeUpdate();
             return (rowsAffected>0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }
@@ -192,7 +187,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             int rowsAffected = decrementAvailableSeatStmt.executeUpdate();
             return (rowsAffected>0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }

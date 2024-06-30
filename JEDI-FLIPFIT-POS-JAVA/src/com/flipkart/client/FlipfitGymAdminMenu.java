@@ -37,7 +37,8 @@ public class FlipfitGymAdminMenu {
 	public void approveGymOwner() {
 		System.out.print("Enter Gym Owner Id you want to verify: ");
 		int gymOwnerId = scanner.nextInt();
-		System.out.println(adminBusiness.approveGymOwner(gymOwnerId));
+		if(adminBusiness.approveGymOwner(gymOwnerId)) System.out.println("Gym Owner is Successfully Verified...");
+		else System.out.println("Gym Owner Verification Failed...\n\t--> Please Enter a Valid Gym Owner Id.");
 	}
 
 	public void viewPendingGymOwnerRequests() {

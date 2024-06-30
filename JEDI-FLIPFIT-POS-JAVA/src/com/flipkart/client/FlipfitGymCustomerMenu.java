@@ -71,7 +71,8 @@ public class FlipfitGymCustomerMenu {
 		Schedule schedule = new Schedule();
 		System.out.print("Select a center Id to book a slot: ");
 		schedule.setGymCenterId(scanner.nextInt());
-		customerBusiness.viewAllSlotByGymCenterId(schedule.getGymCenterId());
+		if(!customerBusiness.viewAllSlotByGymCenterId(schedule.getGymCenterId()))
+			return;
 		System.out.println("Select a slot Id: ");
 		schedule.setSlotId(scanner.nextInt());
 		schedule.setScheduleDate(LocalDate.now());
@@ -86,7 +87,6 @@ public class FlipfitGymCustomerMenu {
 	}
 
 	public void flipfitGymCustomerMainMenu(String email, int customerId) {
-
 		LocalDateTime currentTime = LocalDateTime.now();
 		DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		String formattedDate = currentTime.format(myFormat);

@@ -21,8 +21,6 @@ public class FlipfitGymOwnerMenu {
 		if (gymOwnerId > 0) {
 			System.out.println("Successfully Logged In");
 			FlipfitGymOwnerMainPage(email, gymOwnerId);
-		} else {
-			System.out.println("Invalid Credentials");
 		}
 	}
 
