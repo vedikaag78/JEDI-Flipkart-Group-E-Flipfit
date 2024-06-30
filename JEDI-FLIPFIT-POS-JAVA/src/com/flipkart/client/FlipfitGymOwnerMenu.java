@@ -79,20 +79,9 @@ public class FlipfitGymOwnerMenu {
 	}
 
 	public void addGymCenter(int gymOwnerId){
-
-
 		GymCenter gymCenter = new GymCenter();
 
 		System.out.println("-----Enter Gym Center Details-----");
-
-
-//		System.out.println("Enter gym Owner id: ");
-//		int gymOwnerId = scanner.nextInt();
-//		gymCenter.setGymOwnerId(gymOwnerId);
-
-		System.out.println("Enter gym centre id: ");
-		int gymCenterId = scanner.nextInt();
-		gymCenter.setGymCenterId(gymCenterId) ;
 
 		System.out.println("Enter Gym Centre name: ");
 		String gymCentreName = scanner.next();
@@ -114,14 +103,7 @@ public class FlipfitGymOwnerMenu {
 		int capacity = scanner.nextInt();
 		gymCenter.setCapacity(capacity);
 
-		System.out.println("Enter SlotID ");
-		int slotID = scanner.nextInt();
-		gymCenter.setSlotId(slotID);
-
 		gymCenterBusiness.createGymCenter(gymCenter, gymOwnerId) ;
-
-
-
 	}
 
 	public void FlipfitGymOwnerMainPage(String email, int gymOwnerId) {

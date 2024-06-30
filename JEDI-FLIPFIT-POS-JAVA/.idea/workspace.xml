@@ -5,16 +5,106 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae53692d-ba34-4282-a465-3722de7443b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_3_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__ch_qos_logback_logback_access_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_guava_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_joda_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_github_ben_manes_caffeine_caffeine_2_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_guava_guava_31_1_jre.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_21_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_helger_profiler_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_configuration_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_core_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_jackson_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_jersey_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_jetty_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_lifecycle_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_logging_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_metrics_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_request_logging_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_servlets_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_util_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_validation_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_logback_logback_throttling_appender_1_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_annotation_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_core_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_healthchecks_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jersey2_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jetty9_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jmx_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_json_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jvm_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_logback_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_servlets_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_servlet_jakarta_servlet_api_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_ws_rs_jakarta_ws_rs_api_2_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__joda_time_joda_time_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__net_sourceforge_argparse4j_argparse4j_0_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_apache_commons_commons_text_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_checkerframework_checker_qual_3_25_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlets_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_ajax_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_toolchain_setuid_jetty_setuid_java_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_external_jakarta_inject_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_core_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_server_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_bean_validation_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_metainf_services_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_inject_jersey_hk2_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_1_7_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_javassist_javassist_3_29_1_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_yaml_snakeyaml_1_26.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JEDI-FLIPFIT-POS-JAVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JEDI-FLIPFIT-POS-JAVA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/bean/GymCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/bean/GymCenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusinessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusinessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,46 +129,17 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
   <component name="ProjectId" id="2iRyt2wWqvjC7br3Bv4GPtTeoMu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.GymFlipFitApplication.executor": "Run",
-    "Application.gymCenterAddTest.executor": "Run",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Final",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/aniket.kumar4/Desktop/Project2/JEDI-Flipkart-Group-E-Flipfit/JEDI-FLIPFIT-POS-JAVA",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
   <component name="RunManager" selected="Application.GymFlipFitApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FlipfitCustomerDAOImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.flipkart.dao.FlipfitCustomerDAOImpl" />
       <module name="JEDI-FLIPFIT-POS-JAVA" />
@@ -147,6 +208,7 @@
       <workItem from="1719505076247" duration="731000" />
       <workItem from="1719507359216" duration="17061000" />
       <workItem from="1719729780171" duration="7922000" />
+      <workItem from="1719747085616" duration="273000" />
     </task>
     <servers />
   </component>
@@ -163,5 +225,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

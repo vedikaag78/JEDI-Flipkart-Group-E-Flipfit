@@ -119,35 +119,28 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
-            System.out.println("Creating gym center " + gymCenter.getGymCenterName());
             PreparedStatement insertGymCenterStmt = connection.prepareStatement(
-                    "INSERT INTO GymCenters (" +
-                            "gymCenterId, " +
+                    "INSERT INTO GymCenters ("+
                             "gymOwnerId, " +
-                            "slotId, " +
                             "gymCenterName, " +
                             "address, " +
                             "city, " +
                             "price, " +
                             "capacity) " +
-                            "VALUES (?,?, ?, ?, ?, ?, ?, ?);"
+                            "VALUES (?,?, ?, ?, ?, ?);"
             );
-            insertGymCenterStmt.setInt(1, gymCenter.getGymCenterId());
-            insertGymCenterStmt.setInt(2, gymOwnerId);
-            insertGymCenterStmt.setInt(3, gymCenter.getSlotId());
-            insertGymCenterStmt.setString(4, gymCenter.getGymCenterName());
-            insertGymCenterStmt.setString(5, gymCenter.getAddress());
-            insertGymCenterStmt.setString(6, gymCenter.getCity());
-            insertGymCenterStmt.setInt(7, gymCenter.getPrice());
-            insertGymCenterStmt.setInt(8, gymCenter.getCapacity());
+            insertGymCenterStmt.setInt(1, gymOwnerId);
+            insertGymCenterStmt.setString(2, gymCenter.getGymCenterName());
+            insertGymCenterStmt.setString(3, gymCenter.getAddress());
+            insertGymCenterStmt.setString(4, gymCenter.getCity());
+            insertGymCenterStmt.setInt(5, gymCenter.getPrice());
+            insertGymCenterStmt.setInt(6, gymCenter.getCapacity());
 
-            insertGymCenterStmt.executeUpdate();
-
-
+            int rowsAffected = insertGymCenterStmt.executeUpdate();
             insertGymCenterStmt.close();
 
             connection.close();
-            return true;
+            return (rowsAffected > 0);
         } catch (Exception e) {
             System.out.println(e);
             return false;
