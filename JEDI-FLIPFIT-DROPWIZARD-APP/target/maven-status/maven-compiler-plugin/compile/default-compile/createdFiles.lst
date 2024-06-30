@@ -1,2 +1,16 @@
 com/flipkart/restcontroller/HelloController.class
+com/flipkart/model/Customer.class
+com/flipkart/model/Role.class
+com/flipkart/model/Slot.class
+com/flipkart/model/Booking.class
+com/flipkart/business/GymOwnerBusiness.class
+com/flipkart/model/GymCenter.class
+com/flipkart/model/Schedule.class
+com/flipkart/dao/FlipfitGymCenterDAOImpl.class
+com/flipkart/dao/FlipfitGymOwnerDAOImpl.class
+com/flipkart/model/Admin.class
 com/flipkart/app/App.class
+com/flipkart/model/User.class
+com/flipkart/model/GymOwner.class
+com/flipkart/business/GymCenterBusiness.class
+com/flipkart/restcontroller/GymOwnerController.class
