@@ -26,7 +26,7 @@ public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
             if(roleName.equals("Customer")) userId = queryResult.getInt("userId");
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return userId;
@@ -48,7 +48,7 @@ public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
             customerId = (queryResult.next() ? queryResult.getInt("customerId"):-1);
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return customerId;
@@ -90,11 +90,11 @@ public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
             insertCustomerStmt.setString(6, newCustomer.getCardDetails());
             insertCustomerStmt.setInt(7, last_inserted_id);
 
-            insertCustomerStmt.executeUpdate();
+            int rowsAffected = insertCustomerStmt.executeUpdate();
             connection.close();
-            return true;
+            return (rowsAffected > 0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }
@@ -128,7 +128,7 @@ public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
             connection.close();
             return customer;
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return null;
         }
     }

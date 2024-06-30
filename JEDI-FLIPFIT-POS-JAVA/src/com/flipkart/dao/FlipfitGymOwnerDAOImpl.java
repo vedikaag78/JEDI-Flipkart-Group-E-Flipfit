@@ -34,7 +34,7 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
             if(roleName.equals("GymOwner")) userId = queryResult.getInt("userId");
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return userId;
     }
@@ -55,7 +55,7 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
             gymOwnerId = (queryResult.next() ? queryResult.getInt("gymOwnerId"):-1);
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return gymOwnerId;
@@ -101,11 +101,11 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
             insertGymOwnerStmt.setBoolean(8, gymOwner.isVerified());
             insertGymOwnerStmt.setInt(9, last_inserted_id);
 
-            insertGymOwnerStmt.executeUpdate();
+            int rowsAffected = insertGymOwnerStmt.executeUpdate();
             connection.close();
-            return true;
+            return (rowsAffected > 0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }
@@ -136,7 +136,7 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface{
             }
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return null;
         }
 

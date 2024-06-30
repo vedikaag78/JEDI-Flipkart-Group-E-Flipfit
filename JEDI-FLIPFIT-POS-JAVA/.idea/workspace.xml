@@ -7,10 +7,18 @@
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/utils/GymCenterUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/utils/GymCenterUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/untitled.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

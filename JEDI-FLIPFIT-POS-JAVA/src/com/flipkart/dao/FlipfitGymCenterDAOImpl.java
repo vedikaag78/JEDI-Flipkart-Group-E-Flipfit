@@ -24,12 +24,12 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
             addSlotStmt.setInt(1, slot.getGymCenterId());
             addSlotStmt.setString(2, slot.getStartTime());
             addSlotStmt.setString(3, slot.getEndTime());
-            addSlotStmt.executeUpdate();
+            int rowsAffected = addSlotStmt.executeUpdate();
             connection.close();
 
-            return true;
+            return (rowsAffected > 0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }
@@ -57,7 +57,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return null;
         }
 
@@ -72,7 +72,10 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
 
             PreparedStatement getGymCenterStmt = connection.prepareStatement(
-                    "SELECT * FROM gymCenters;");
+                    "SELECT gc.*\n" +
+                            "FROM gymCenters gc\n" +
+                            "JOIN gymOwners go ON gc.gymOwnerId = go.gymOwnerId\n" +
+                            "WHERE go.isVerified = TRUE;");
 
             ResultSet queryResult = getGymCenterStmt.executeQuery();
 
@@ -87,7 +90,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return null;
         }
 
@@ -108,7 +111,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
             getGymCapacity = (queryResult.next() ? queryResult.getInt("capacity") : -1);
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return getGymCapacity;

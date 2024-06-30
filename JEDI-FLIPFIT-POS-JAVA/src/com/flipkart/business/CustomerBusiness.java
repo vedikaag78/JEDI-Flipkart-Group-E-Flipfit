@@ -35,8 +35,10 @@ public class CustomerBusiness implements CustomerInterface{
 		GymCenterUtils.printGymCenterList(gymCenterDAO.viewAllGym());
 	}
 
-	public void viewAllSlotByGymCenterId(int gymCenterId){
-		GymCenterUtils.printGymCenterSlotList(gymCenterDAO.getAllSlotByGymCenterId(gymCenterId));
+	public boolean viewAllSlotByGymCenterId(int gymCenterId){
+		List<Slot> slotList = gymCenterDAO.getAllSlotByGymCenterId(gymCenterId);
+		GymCenterUtils.printGymCenterSlotList(slotList);
+		return (slotList.size()>0);
 	}
 
 //	public boolean checkForAvailablity(int scheduleId){
@@ -65,12 +67,14 @@ public class CustomerBusiness implements CustomerInterface{
 	public void viewAllBookings(int customerId){
 		List<Booking> bookingList = bookingDAO.getAllBookingsByCustomerId(customerId);
 		System.out.println("--------------------------------------------");
+		System.out.println("Booking History: ");
 		int i = 1;
 		for(Booking booking:bookingList){
 			Schedule schedule = bookingDAO.getBookingSchedule(booking);
 			Slot slot = bookingDAO.getBookingSlot(schedule);
 			System.out.println(i + ". " + "Date: " + schedule.getScheduleDate() +
 					"\t\tbookingId: " + booking.getBookingId() +
+					"\t\tslot date: " + schedule.getScheduleDate() +
 					"\t\tstart time: " + slot.getStartTime() +
 					"\t\tend time: " + slot.getEndTime() +
 					"\t\tcenterId: " + schedule.getGymCenterId());

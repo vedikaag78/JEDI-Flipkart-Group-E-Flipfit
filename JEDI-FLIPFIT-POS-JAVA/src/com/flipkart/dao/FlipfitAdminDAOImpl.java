@@ -36,7 +36,7 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface {
             roleName = (queryResult.next() ? queryResult.getString("roleName"):"");
             connection.close();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return roleName.equals("Admin");
@@ -51,11 +51,10 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface {
             PreparedStatement stmt = connection.prepareStatement(updateQuery);
             stmt.setInt(1, gymOwnerId);
 
-            int i = stmt.executeUpdate();
-            System.out.println("Gym is Verified...");
-            return true ;
+            int rowsAffected = stmt.executeUpdate();
+            return  (rowsAffected > 0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }
@@ -79,7 +78,7 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface {
             }
             return gymOwnerList;
         }catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return null;
         }
     }
