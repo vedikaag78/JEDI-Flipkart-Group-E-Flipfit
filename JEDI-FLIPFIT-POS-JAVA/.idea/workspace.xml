@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae53692d-ba34-4282-a465-3722de7443b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/restcontroller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/CustomerBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/CustomerBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitCustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/untitled.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
