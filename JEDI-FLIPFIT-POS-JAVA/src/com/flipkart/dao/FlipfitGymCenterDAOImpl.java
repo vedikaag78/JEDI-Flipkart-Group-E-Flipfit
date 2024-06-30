@@ -5,7 +5,6 @@ package com.flipkart.dao;
  */
 import com.flipkart.bean.GymCenter;
 import com.flipkart.bean.Slot;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -112,5 +111,43 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
         }
 
         return getGymCapacity;
+    }
+    public boolean createGymCenter(GymCenter gymCenter,int gymOwnerId){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            System.out.println("Creating gym center " + gymCenter.getGymCenterName());
+            PreparedStatement insertGymCenterStmt = connection.prepareStatement(
+                    "INSERT INTO GymCenters (" +
+                            "gymCenterId, " +
+                            "gymOwnerId, " +
+                            "slotId, " +
+                            "gymCenterName, " +
+                            "address, " +
+                            "city, " +
+                            "price, " +
+                            "capacity) " +
+                            "VALUES (?,?, ?, ?, ?, ?, ?, ?);"
+            );
+            insertGymCenterStmt.setInt(1, gymCenter.getGymCenterId());
+            insertGymCenterStmt.setInt(2, gymOwnerId);
+            insertGymCenterStmt.setInt(3, gymCenter.getSlotId());
+            insertGymCenterStmt.setString(4, gymCenter.getGymCenterName());
+            insertGymCenterStmt.setString(5, gymCenter.getAddress());
+            insertGymCenterStmt.setString(6, gymCenter.getCity());
+            insertGymCenterStmt.setInt(7, gymCenter.getPrice());
+            insertGymCenterStmt.setInt(8, gymCenter.getCapacity());
+
+            insertGymCenterStmt.executeUpdate();
+
+
+            insertGymCenterStmt.close();
+
+            connection.close();
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
+        }
     }
 }

@@ -3,9 +3,8 @@ package com.flipkart.client;
 import com.flipkart.bean.GymCenter;
 import com.flipkart.bean.GymOwner;
 import com.flipkart.bean.Slot;
-import com.flipkart.business.AdminBusiness;
-import com.flipkart.business.GymCenterBusiness;
-import com.flipkart.business.GymOwnerBusiness;
+import com.flipkart.business.*;
+import com.flipkart.dao.FlipfitGymCenterDAOImpl;
 import com.flipkart.utils.GymCenterUtils;
 
 import java.time.LocalDateTime;
@@ -16,7 +15,7 @@ import static com.flipkart.client.GymFlipFitApplication.scanner;
 
 public class FlipfitGymOwnerMenu {
 	private GymOwnerBusiness gymOwnerBusiness = new GymOwnerBusiness();
-
+	private GymCenterBusiness gymCenterBusiness = new GymCenterBusiness();
 	public void loginGymOwner(String email, String password){
 		int gymOwnerId = gymOwnerBusiness.validateGymOwner(email,password);
 		if (gymOwnerId > 0) {
@@ -81,6 +80,52 @@ public class FlipfitGymOwnerMenu {
 		System.out.println("--------------------------------------------");
 	}
 
+	public void addGymCenter(int gymOwnerId){
+
+
+		GymCenter gymCenter = new GymCenter();
+
+		System.out.println("-----Enter Gym Center Details-----");
+
+
+//		System.out.println("Enter gym Owner id: ");
+//		int gymOwnerId = scanner.nextInt();
+//		gymCenter.setGymOwnerId(gymOwnerId);
+
+		System.out.println("Enter gym centre id: ");
+		int gymCenterId = scanner.nextInt();
+		gymCenter.setGymCenterId(gymCenterId) ;
+
+		System.out.println("Enter Gym Centre name: ");
+		String gymCentreName = scanner.next();
+		gymCenter.setGymCenterName(gymCentreName); ;
+
+		System.out.println("Enter Gym Centre Address: ");
+		String address = scanner.next();
+		gymCenter.setAddress(address);
+
+		System.out.println("Enter Gym Centre city: ");
+		String city = scanner.next();
+		gymCenter.setCity(city);
+
+		System.out.println("Enter price: ");
+		int price = scanner.nextInt();
+		gymCenter.setPrice(price);
+
+		System.out.println("Enter Gym Centre capacity: ");
+		int capacity = scanner.nextInt();
+		gymCenter.setCapacity(capacity);
+
+		System.out.println("Enter SlotID ");
+		int slotID = scanner.nextInt();
+		gymCenter.setSlotId(slotID);
+
+		gymCenterBusiness.createGymCenter(gymCenter, gymOwnerId) ;
+
+
+
+	}
+
 	public void FlipfitGymOwnerMainPage(String email, int gymOwnerId) {
 		LocalDateTime currentTime = LocalDateTime.now();
 		DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
@@ -101,24 +146,7 @@ public class FlipfitGymOwnerMenu {
 				viewAllGymCenters(gymOwnerId);
 				break;
 			case 2:
-				System.out.println("-----Enter Gym Center Details-----");
-				System.out.println("Enter gym centre id: ");
-				String gymId = scanner.next();
-
-				System.out.println("Enter Gym Centre name: ");
-				String gymCentreName = scanner.next();
-
-				System.out.println("Enter Gym Centre GSTIN: ");
-				String gstin = scanner.next();
-
-				System.out.println("Enter Gym Centre city: ");
-				String city = scanner.next();
-
-				System.out.println("Enter Gym Centre capacity: ");
-				int capacity = scanner.nextInt();
-
-				System.out.println("Enter price: ");
-				int price = scanner.nextInt();
+				addGymCenter(gymOwnerId);
 				break;
 
 			case 3:

@@ -6,9 +6,15 @@ package com.flipkart.business;
 /**
  * 
  */
+import com.flipkart.bean.GymCenter;
+import com.flipkart.dao.FlipfitGymCenterDAOImpl ;
 public class GymCenterBusiness implements GymCenterBusinessInterface {
-	public void createGymCenter() {
-		System.out.println("Gym Center Created");
+
+
+
+	public void createGymCenter(GymCenter gymCenter, int gymOwnerId) {
+		FlipfitGymCenterDAOImpl gymCenterDAO = new FlipfitGymCenterDAOImpl();
+		gymCenterDAO.createGymCenter(gymCenter, gymOwnerId);
 	}
 
 	public boolean updateGymCenter(int gymCenterId) {

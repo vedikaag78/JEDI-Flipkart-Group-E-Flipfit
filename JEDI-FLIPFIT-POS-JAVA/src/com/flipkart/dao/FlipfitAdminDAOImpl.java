@@ -16,6 +16,7 @@ import java.util.List;
  * 
  */
 public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface {
+    
     public boolean isValidAdmin(String emailId, String password){
         String roleName = "";
         try {

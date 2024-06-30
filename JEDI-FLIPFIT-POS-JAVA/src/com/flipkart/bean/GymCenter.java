@@ -14,6 +14,7 @@ public class GymCenter {
     private int price;
     private int capacity;
     private ArrayList<Integer> slotListIds;
+    private int slotID;
 
     public int getGymCenterId() {
         return gymCenterId;
@@ -77,5 +78,11 @@ public class GymCenter {
 
     public void setSlotListIds(ArrayList<Integer> slotListIds) {
         this.slotListIds = slotListIds;
+    }
+
+    public int getSlotId() {return slotID;}
+
+    public void setSlotId(int slotID) {
+        this.slotID = slotID;
     }
 }

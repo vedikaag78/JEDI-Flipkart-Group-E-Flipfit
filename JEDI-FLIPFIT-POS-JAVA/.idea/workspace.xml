@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ae53692d-ba34-4282-a465-3722de7443b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_3_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/CustomerBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/CustomerBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymAdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymCustomerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JEDI-FLIPFIT-POS-JAVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JEDI-FLIPFIT-POS-JAVA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/bean/GymCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/bean/GymCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusinessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/business/GymCenterBusinessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/FlipfitGymOwnerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/GymFlipFitApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymBookingDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/utils/GymCenterUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/utils/GymCenterUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitAdminDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/dao/FlipfitGymCenterDAOInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,25 +39,46 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2iRyt2wWqvjC7br3Bv4GPtTeoMu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GymFlipFitApplication.executor": "Run",
+    "Application.gymCenterAddTest.executor": "Run",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Final",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/aniket.kumar4/Desktop/Project2/JEDI-Flipkart-Group-E-Flipfit/JEDI-FLIPFIT-POS-JAVA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.GymFlipFitApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FlipfitCustomerDAOImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.flipkart.dao.FlipfitCustomerDAOImpl" />
       <module name="JEDI-FLIPFIT-POS-JAVA" />
@@ -80,13 +105,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="gymCenterAddTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.flipkart.client.gymCenterAddTest" />
+      <module name="JEDI-FLIPFIT-POS-JAVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flipkart.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,9 +121,18 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GymFlipFitApplication" />
+        <item itemvalue="Application.gymCenterAddTest" />
         <item itemvalue="Application.FlipfitCustomerDAOImpl" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -110,6 +146,7 @@
       <workItem from="1719468028645" duration="15021000" />
       <workItem from="1719505076247" duration="731000" />
       <workItem from="1719507359216" duration="17061000" />
+      <workItem from="1719729780171" duration="7922000" />
     </task>
     <servers />
   </component>
@@ -126,6 +163,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
