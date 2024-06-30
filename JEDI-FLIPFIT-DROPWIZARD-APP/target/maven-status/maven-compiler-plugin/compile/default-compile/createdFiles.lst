@@ -1,10 +1,13 @@
 com/flipkart/restcontroller/HelloController.class
+com/flipkart/dao/FlipfitCustomerDAOImpl.class
 com/flipkart/model/Customer.class
+com/flipkart/business/CustomerBusiness.class
 com/flipkart/model/Role.class
 com/flipkart/model/Slot.class
 com/flipkart/model/Booking.class
 com/flipkart/business/GymOwnerBusiness.class
 com/flipkart/model/GymCenter.class
+com/flipkart/restcontroller/CustomerController.class
 com/flipkart/model/Schedule.class
 com/flipkart/dao/FlipfitGymCenterDAOImpl.class
 com/flipkart/dao/FlipfitGymOwnerDAOImpl.class

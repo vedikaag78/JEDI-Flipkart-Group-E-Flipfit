@@ -9,8 +9,5 @@
         <module name="JEDI-FLIPFIT-DROPWIZARD-APP" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="JEDI-FLIPFIT-DROPWIZARD-APP" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
