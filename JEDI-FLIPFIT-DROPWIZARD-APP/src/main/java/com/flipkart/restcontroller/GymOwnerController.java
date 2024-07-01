@@ -6,6 +6,7 @@ import com.flipkart.model.Slot;
 
 import com.flipkart.business.GymCenterBusiness;
 import com.flipkart.business.GymOwnerBusiness;
+import com.flipkart.model.User;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -21,8 +22,8 @@ public class GymOwnerController {
 
     @POST
     @Path("/login")
-    public Response loginGymOwner(@QueryParam("email") String email, @QueryParam("password") String password) {
-        int gymOwnerId = gymOwnerBusiness.validateGymOwner(email, password);
+    public Response loginGymOwner(User user) {
+        int gymOwnerId = gymOwnerBusiness.validateGymOwner(user.getEmailId(), user.getPassword());
         if (gymOwnerId > 0) {
             return Response.ok("Successfully Logged In").build();
         } else {
@@ -32,9 +33,11 @@ public class GymOwnerController {
 
     @POST
     @Path("/register")
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response registerGymOwner(GymOwner gymOwner) {
         gymOwner.setVerified(false);
         boolean isCreated = gymOwnerBusiness.createGymOwner(gymOwner);
+        System.out.println(gymOwner.getGymOwnerName());
         if (isCreated) {
             return Response.ok("Gym Owner Registered Successfully").build();
         } else {
@@ -49,13 +52,12 @@ public class GymOwnerController {
         return Response.ok(gymCenters).build();
     }
 
-//    Instead of object all attributes will be sent in query.
-//    @POST
-//    @Path("/addSlot")
-//    public Response addSlotToGymCenter(Slot slot) {
-//        gymOwnerBusiness.addSlotWithGymID(slot);
-//        return Response.ok("Slot Successfully Created").build();
-//    }
+    @POST
+    @Path("/addSlot")
+    public Response addSlotToGymCenter(Slot slot) {
+        gymOwnerBusiness.addSlotWithGymID(slot);
+        return Response.ok("Slot Successfully Created").build();
+    }
 
     @POST
     @Path("/{gymOwnerId}/addGymCenter")
