@@ -41,12 +41,6 @@ public class CustomerBusiness implements CustomerInterface{
 		return (slotList.size()>0);
 	}
 
-//	public boolean checkForAvailablity(int scheduleId){
-//		if(scheduleId==-1) return false;
-//		return (bookingDAO.getAvailableSeats(scheduleId) > 0);
-//		return true;
-//	}
-
 	public boolean bookSlot(Schedule schedule, int customerId){
 		if(!bookingDAO.checkSchedule(schedule)){
 			int capacity = gymCenterDAO.getGymCapacity(schedule.getGymCenterId());

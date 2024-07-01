@@ -1,9 +1,6 @@
 package com.flipkart.app;
 
-import com.flipkart.restcontroller.AdminController;
-import com.flipkart.restcontroller.CustomerController;
-import com.flipkart.restcontroller.HelloController;
-import com.flipkart.restcontroller.GymOwnerController;
+import com.flipkart.restcontroller.*;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
@@ -28,6 +25,7 @@ public class App extends Application<Configuration> {
         e.jersey().register(new GymOwnerController());
         e.jersey().register(new CustomerController());
         e.jersey().register(new AdminController());
+        e.jersey().register(new BookingController());
     }
 
     public static void main(String[] args) throws Exception {

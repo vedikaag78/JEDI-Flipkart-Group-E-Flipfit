@@ -59,7 +59,5 @@ public class CustomerController {
            return Response.status(Response.Status.NOT_FOUND).entity("Invalid custID").build();
        }
     }
-
-
 }
 
