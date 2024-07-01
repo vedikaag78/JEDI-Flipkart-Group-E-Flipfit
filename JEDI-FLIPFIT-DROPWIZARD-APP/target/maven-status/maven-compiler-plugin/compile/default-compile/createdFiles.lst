@@ -14,6 +14,7 @@ com/flipkart/dao/FlipfitGymOwnerDAOImpl.class
 com/flipkart/model/Admin.class
 com/flipkart/app/App.class
 com/flipkart/model/User.class
+com/flipkart/restcontroller/AdminController.class
 com/flipkart/model/GymOwner.class
 com/flipkart/business/GymCenterBusiness.class
 com/flipkart/restcontroller/GymOwnerController.class
