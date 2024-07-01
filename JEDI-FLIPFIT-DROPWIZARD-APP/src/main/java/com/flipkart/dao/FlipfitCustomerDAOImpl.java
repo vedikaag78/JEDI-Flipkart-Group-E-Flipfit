@@ -1,12 +1,21 @@
 package com.flipkart.dao;
 
-
-import com.flipkart.model.*;
+import com.flipkart.model.Customer;
 
 import java.sql.*;
 
-public class FlipfitCustomerDAOImpl  {
-    
+/**
+ * Implementation class for managing customer-related functionalities in the Flipfit application.
+ */
+public class FlipfitCustomerDAOImpl implements FlipfitCustomerDAOInterface {
+
+    /**
+     * Validates if the provided email ID and password correspond to a registered gym customer.
+     *
+     * @param emailId the email ID of the customer
+     * @param password the password of the customer
+     * @return the user ID of the customer if valid, or -1 if not found or an error occurs
+     */
     public int isValidGymCustomer(String emailId, String password){
         int userId = -1;
         try {
@@ -34,6 +43,12 @@ public class FlipfitCustomerDAOImpl  {
         return userId;
     }
 
+    /**
+     * Retrieves the customer ID associated with the given user ID.
+     *
+     * @param userId the user ID for which to retrieve the customer ID
+     * @return the customer ID if found, or -1 if not found or an error occurs
+     */
     public int getCustomerId(int userId){
         int customerId = -1;
         try {
@@ -56,6 +71,12 @@ public class FlipfitCustomerDAOImpl  {
         return customerId;
     }
 
+    /**
+     * Creates a new customer record in the database.
+     *
+     * @param newCustomer the Customer object containing the details to be inserted
+     * @return true if the customer was successfully created, false otherwise
+     */
     public boolean createCustomer(Customer newCustomer) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -101,6 +122,12 @@ public class FlipfitCustomerDAOImpl  {
         }
     }
 
+    /**
+     * Retrieves a Customer object based on the given customer ID.
+     *
+     * @param custID the customer ID for which to retrieve the Customer object
+     * @return a Customer object if found, or null if not found or an error occurs
+     */
     public Customer getCustomerByCustomerId(int custID) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
