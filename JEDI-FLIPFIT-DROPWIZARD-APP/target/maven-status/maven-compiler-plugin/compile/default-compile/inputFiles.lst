@@ -1,8 +1,11 @@
+/Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/business/CustomerBusiness.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/business/GymCenterBusiness.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/restcontroller/GymOwnerController.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java
+/Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/restcontroller/CustomerController.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/model/GymOwner.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/app/App.java
+/Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/dao/FlipfitCustomerDAOImpl.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/model/Slot.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/restcontroller/HelloController.java
 /Users/modi.rahul/Desktop/JEDICodeBase/JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/dao/FlipfitGymCenterDAOImpl.java

@@ -5,7 +5,130 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae53692d-ba34-4282-a465-3722de7443b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/restcontroller/GymOwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/restcontroller/GymOwnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/business/CustomerBusiness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/dao/FlipfitCustomerDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/restcontroller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/CustomerBusiness.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/class-use/CustomerBusiness.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/FlipfitCustomerDAOImpl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/class-use/FlipfitCustomerDAOImpl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/CustomerController.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/class-use/CustomerController.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resource-files/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resource-files/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resource-files/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-files/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-files/search-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-files/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/business/CustomerBusiness.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/dao/FlipfitCustomerDAOImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/restcontroller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__ch_qos_logback_logback_access_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_guava_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_joda_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_github_ben_manes_caffeine_caffeine_2_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_guava_guava_31_1_jre.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_21_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_helger_profiler_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_configuration_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_core_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_jackson_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_jersey_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_jetty_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_lifecycle_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_logging_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_metrics_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_request_logging_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_servlets_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_util_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_dropwizard_validation_2_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_logback_logback_throttling_appender_1_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_annotation_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_core_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_healthchecks_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jersey2_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jetty9_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jmx_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_json_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_jvm_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_logback_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__io_dropwizard_metrics_metrics_servlets_4_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_servlet_jakarta_servlet_api_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_ws_rs_jakarta_ws_rs_api_2_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__joda_time_joda_time_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__net_sourceforge_argparse4j_argparse4j_0_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_apache_commons_commons_text_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_checkerframework_checker_qual_3_25_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlets_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_ajax_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_eclipse_jetty_toolchain_setuid_jetty_setuid_java_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_external_jakarta_inject_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_core_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_server_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_bean_validation_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_metainf_services_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_glassfish_jersey_inject_jersey_hk2_2_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_1_7_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_javassist_javassist_3_29_1_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/libraries/Maven__org_yaml_snakeyaml_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/JEDI-FLIPFIT-DROPWIZARD-APP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/src/main/java/com/flipkart/dao/FlipfitGymOwnerDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT-javadoc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT-javadoc.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT-sources.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT.jar" afterDir="false" />
@@ -16,6 +139,41 @@
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/app/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/app/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/app/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/app/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/app/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/app/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/GymCenterBusiness.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/GymCenterBusiness.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/GymOwnerBusiness.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/GymOwnerBusiness.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/class-use/GymCenterBusiness.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/class-use/GymCenterBusiness.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/class-use/GymOwnerBusiness.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/class-use/GymOwnerBusiness.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/business/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/FlipfitGymCenterDAOImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/FlipfitGymCenterDAOImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/FlipfitGymOwnerDAOImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/FlipfitGymOwnerDAOImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/class-use/FlipfitGymCenterDAOImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/class-use/FlipfitGymCenterDAOImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/class-use/FlipfitGymOwnerDAOImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/class-use/FlipfitGymOwnerDAOImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/dao/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/GymCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/GymCenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/GymOwner.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/GymOwner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Role.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Slot.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/Slot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/GymCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/GymCenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/GymOwner.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/GymOwner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Role.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Slot.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/Slot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/class-use/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/model/package-use.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/GymOwnerController.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/GymOwnerController.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/HelloController.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/HelloController.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/class-use/GymOwnerController.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/com/flipkart/restcontroller/class-use/GymOwnerController.html" afterDir="false" />
@@ -26,15 +184,32 @@
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/help-doc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/index-all.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/legal/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/legal/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/legal/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/member-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/overview-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resources/glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resource-files/glass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resources/x.png" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resource-files/x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-dir/jquery-3.6.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-files/jquery-3.6.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-dir/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/resource-files/jquery-ui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-dir/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script-files/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/apidocs/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/app/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/app/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/dao/FlipfitGymOwnerDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/dao/FlipfitGymOwnerDAOImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/restcontroller/GymOwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/classes/com/flipkart/restcontroller/GymOwnerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-javadoc-plugin-stale-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-javadoc-plugin-stale-data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/original-JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/original-JEDI-FLIPFIT-DROPWIZARD-APP-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/surefire-reports/TEST-com.flipkart.app.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/surefire-reports/TEST-com.flipkart.app.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/surefire-reports/com.flipkart.app.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-FLIPFIT-DROPWIZARD-APP/target/surefire-reports/com.flipkart.app.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JEDI-Flipkart-Group-E-Flipfit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JEDI-Flipkart-Group-E-Flipfit.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +315,7 @@
       <workItem from="1719507359216" duration="17061000" />
       <workItem from="1719729780171" duration="7922000" />
       <workItem from="1719747085616" duration="273000" />
-      <workItem from="1719747386610" duration="1956000" />
+      <workItem from="1719747386610" duration="2228000" />
     </task>
     <servers />
   </component>

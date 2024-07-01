@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="JEDI-FLIPFIT-DROPWIZARD-APP (1)" />
         <module name="JEDI-FLIPFIT-DROPWIZARD-APP" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JEDI-FLIPFIT-DROPWIZARD-APP" target="1.8" />
+      <module name="JEDI-FLIPFIT-DROPWIZARD-APP (2)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

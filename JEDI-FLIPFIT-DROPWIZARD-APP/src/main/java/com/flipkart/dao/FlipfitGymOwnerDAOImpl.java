@@ -9,9 +9,6 @@ import com.flipkart.model.GymOwner;
 import java.sql.*;
 import java.util.*;
 
-/**
- *
- */
 public class FlipfitGymOwnerDAOImpl {
     public int isValidGymOwner(String emailId, String password){
         int userId = -1;
