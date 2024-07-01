@@ -8,16 +8,24 @@ import com.flipkart.model.User;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+/**
+ * REST controller for handling admin-related operations.
+ */
 @Path("/admin")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class AdminController {
+    // Instance of AdminBusiness to handle business logic
     private final AdminBusiness adminBusiness = new AdminBusiness();
 
+    /**
+     * Endpoint to handle admin login.
+     *
+     * @param user The user object containing email and password.
+     * @return Response indicating success or failure of the login operation.
+     */
     @POST
     @Path("/login")
     @Timed
@@ -29,6 +37,12 @@ public class AdminController {
         }
     }
 
+    /**
+     * Endpoint to approve a gym owner.
+     *
+     * @param gymOwnerId The ID of the gym owner to be approved.
+     * @return Response indicating success or failure of the approval operation.
+     */
     @POST
     @Path("/gym-owner/approve")
     @Timed
@@ -42,6 +56,11 @@ public class AdminController {
         }
     }
 
+    /**
+     * Endpoint to view pending gym owner approval requests.
+     *
+     * @return Response containing the list of pending gym owner requests.
+     */
     @GET
     @Path("/gym-owner/pending")
     @Timed
@@ -50,4 +69,3 @@ public class AdminController {
         return Response.ok(pendingGymOwnerList).build();
     }
 }
-

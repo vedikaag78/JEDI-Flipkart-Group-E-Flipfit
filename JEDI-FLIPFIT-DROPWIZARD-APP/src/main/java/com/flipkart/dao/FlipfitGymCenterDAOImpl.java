@@ -1,16 +1,23 @@
 package com.flipkart.dao;
 
-/**
- *
- */
 import com.flipkart.model.GymCenter;
 import com.flipkart.model.Slot;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlipfitGymCenterDAOImpl {
+/**
+ * Implementation class for managing gym center-related functionalities in the Flipfit application.
+ */
+public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
 
+    /**
+     * Adds a new time slot associated with a gym center to the database.
+     *
+     * @param slot the Slot object containing slot details to be added
+     * @return true if the slot was successfully added, false otherwise
+     */
     public boolean addSlotWithGymID(Slot slot){
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -33,6 +40,13 @@ public class FlipfitGymCenterDAOImpl {
         }
     }
 
+    /**
+     * Retrieves all time slots associated with a specific gym center from the database.
+     *
+     * @param gymCenterId the ID of the gym center for which to retrieve slots
+     * @return a list of Slot objects representing all slots of the gym center,
+     *         or null if an error occurs during database access
+     */
     public List<Slot> getAllSlotByGymCenterId(int gymCenterId){
         List<Slot> slotList = new ArrayList<>();
 
@@ -63,6 +77,12 @@ public class FlipfitGymCenterDAOImpl {
         return slotList;
     }
 
+    /**
+     * Retrieves a list of all verified gym centers from the database.
+     *
+     * @return a list of GymCenter objects representing all verified gym centers,
+     *         or null if an error occurs during database access
+     */
     public List<GymCenter> viewAllGym(){
         List<GymCenter> gymCenterList = new ArrayList<>();
 
@@ -96,8 +116,14 @@ public class FlipfitGymCenterDAOImpl {
         return gymCenterList;
     }
 
+    /**
+     * Retrieves the capacity of a gym center based on the provided gym center ID.
+     *
+     * @param gymCenterId the ID of the gym center for which to retrieve capacity
+     * @return the capacity of the gym center if found, or -1 if not found or an error occurs
+     */
     public int getGymCapacity(int gymCenterId){
-        int getGymCapacity = -1;
+        int gymCapacity = -1;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
@@ -107,14 +133,22 @@ public class FlipfitGymCenterDAOImpl {
 
             getAvailableSeatsStmt.setInt(1,gymCenterId);
             ResultSet queryResult = getAvailableSeatsStmt.executeQuery();
-            getGymCapacity = (queryResult.next() ? queryResult.getInt("capacity") : -1);
+            gymCapacity = (queryResult.next() ? queryResult.getInt("capacity") : -1);
             connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return getGymCapacity;
+        return gymCapacity;
     }
+
+    /**
+     * Creates a new gym center record in the database.
+     *
+     * @param gymCenter the GymCenter object containing the details to be inserted
+     * @param gymOwnerId the ID of the gym owner associated with the gym center
+     * @return true if the gym center was successfully created, false otherwise
+     */
     public boolean createGymCenter(GymCenter gymCenter,int gymOwnerId){
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -142,7 +176,7 @@ public class FlipfitGymCenterDAOImpl {
             connection.close();
             return (rowsAffected > 0);
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return false;
         }
     }
