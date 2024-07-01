@@ -4,6 +4,8 @@ package com.flipkart.restcontroller;
 
 import com.flipkart.business.CustomerBusiness;
 import com.flipkart.model.Customer;
+import com.flipkart.model.User;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -18,15 +20,13 @@ public class CustomerController {
     @GET
     @Path("/test")
     public Response testFunc( ) {
-
         return Response.ok("Able to hit routes").build();
     }
 
-    // api test done
     @POST
     @Path("/login")
-    public Response loginCustomer(@QueryParam("email") String email, @QueryParam("password") String password) {
-        int CustId = customerBusiness.validateCustomer(email, password);
+    public Response loginCustomer(User user) {
+        int CustId = customerBusiness.validateCustomer(user.getEmailId(), user.getPassword());
         if (CustId > 0) {
             return Response.ok("Successfully Logged In").build();
         } else {
@@ -34,10 +34,6 @@ public class CustomerController {
         }
     }
 
-    /* api test not done , cause unsure of how customer object is getting passed
-        body ko json mai parse karke bhej rahe kya ?
-        query se toh bahot bada link ban jayega
-     */
     @POST
     @Path("/register")
     public Response registerCustomer(Customer customer) {
@@ -50,31 +46,14 @@ public class CustomerController {
         }
     }
 
-     // api test done
     @GET
-    @Path("/getCustomerID/{userID}")
-    public Response getCustomerIdByUserId(  @PathParam("userID") int userID ) {
-        int custId = customerBusiness.getCustomerId(userID);
-        if (custId > 0) {
-            return Response.ok("Customer ID: "+custId).build();
-        }
-        else{
-            return Response.status(Response.Status.NOT_FOUND).entity("Invalid UserID").build();
-        }
-
-
-    }
-
-    // api test done
-
-    @GET
-    @Path("/getCustomer/{custID}")
+    @Path("/profile/{custID}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCustomer(@PathParam("custID") int userID) {
        Customer customer = customerBusiness.getCustomerByCustomerId(userID);
        if (customer != null) {
            // return the entire object as JSON
-           return Response.ok("Customer Details: "+ customer.getCustomerName() ).build();
+           return Response.ok(customer).build();
        }
        else{
            return Response.status(Response.Status.NOT_FOUND).entity("Invalid custID").build();

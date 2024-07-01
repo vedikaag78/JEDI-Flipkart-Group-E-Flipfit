@@ -1,5 +1,6 @@
 package com.flipkart.app;
 
+import com.flipkart.restcontroller.AdminController;
 import com.flipkart.restcontroller.CustomerController;
 import com.flipkart.restcontroller.HelloController;
 import com.flipkart.restcontroller.GymOwnerController;
@@ -26,6 +27,7 @@ public class App extends Application<Configuration> {
         e.jersey().register(new HelloController());
         e.jersey().register(new GymOwnerController());
         e.jersey().register(new CustomerController());
+        e.jersey().register(new AdminController());
     }
 
     public static void main(String[] args) throws Exception {

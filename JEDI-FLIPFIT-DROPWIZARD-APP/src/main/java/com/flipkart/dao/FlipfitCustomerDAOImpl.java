@@ -107,7 +107,11 @@ public class FlipfitCustomerDAOImpl  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
 
             PreparedStatement getCustomerByIdStmt = connection.prepareStatement(
-                    "SELECT * FROM customers WHERE customerId = ?");
+                    "SELECT *\n" +
+                            "FROM customers c\n" +
+                            "JOIN users u ON c.userId = u.userId\n" +
+                            "JOIN roles r ON u.roleId = r.roleId\n" +
+                            "WHERE c.customerId = ?;\n");
 
             getCustomerByIdStmt.setInt(1, custID);
 
@@ -120,6 +124,11 @@ public class FlipfitCustomerDAOImpl  {
             }
 
             Customer customer = new Customer();
+            customer.setCustomerId(queryResult.getInt("customerId"));
+            customer.setEmailId(queryResult.getString("emailId"));
+            customer.setRoleId(queryResult.getInt("roleId"));
+            customer.setRoleName(queryResult.getString("roleName"));
+            customer.setRoleDescription(queryResult.getString("roleDescription"));
             customer.setCustomerName(queryResult.getString("customerName"));
             customer.setCustomerAddress(queryResult.getString("customerAddress"));
             customer.setGender(queryResult.getString("gender"));
