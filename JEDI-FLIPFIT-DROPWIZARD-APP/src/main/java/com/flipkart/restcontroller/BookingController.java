@@ -12,12 +12,19 @@ import javax.ws.rs.core.Response;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * REST controller for handling booking-related operations.
+ */
 @Path("/booking")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class BookingController {
     private CustomerBusiness customerBusiness = new CustomerBusiness();
 
+    /**
+     * Endpoint to get all verified Centers.
+     *
+     */
     @GET
     @Path("/centers")
     public Response getAllCenters() {
@@ -25,6 +32,11 @@ public class BookingController {
         return Response.ok(gymCenterList).build();
     }
 
+    /**
+     * Endpoint to get slots for a given centerId
+     *
+     * @param centerId center Id of the gym center
+     */
     @GET
     @Path("/{centerId}/slots")
     public Response getAllSlots(@PathParam("centerId") int centerId) {
@@ -32,6 +44,13 @@ public class BookingController {
         return  Response.ok(slotList).build();
     }
 
+    /**
+     * Endpoint to get slots for a given centerId
+     *
+     * @param customerId customer Id for which booking needs to be done
+     * @param centerId center Id of the gym Center for which booking needs to be done
+     * @param slotId slot Id of the gym Center for which booking needs to be done
+     */
     @POST
     @Path("/add/{customerId}/{centerId}/{slotId}")
     public Response addBooking(@PathParam("customerId") int customerId, @PathParam("centerId") int centerId, @PathParam("slotId") int slotId) {
