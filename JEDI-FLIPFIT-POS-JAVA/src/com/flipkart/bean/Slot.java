@@ -1,39 +1,44 @@
 /**
- * 
+ *
  */
 package com.flipkart.bean;
 
 import java.time.LocalTime;
 
 /**
- * 
+ *
  */
 public class Slot {
-	public int getSlotId() {
-		return slotId;
-	}
+    public int getSlotId() {
+        return slotId;
+    }
 
-	public void setSlotId(int slotId) {
-		this.slotId = slotId;
-	}
+    public void setSlotId(int slotId) {
+        this.slotId = slotId;
+    }
 
-	public int getGymCenterId() {
-		return gymCenterId;
-	}
+    public String getStartTime() {
+        return startTime;
+    }
 
-	public void setGymCenterId(int gymCenterId) {
-		this.gymCenterId = gymCenterId;
-	}
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
 
-	public LocalTime getTime() {
-		return time;
-	}
+    public String getEndTime() {
+        return endTime;
+    }
 
-	public void setTime(LocalTime time) {
-		this.time = time;
-	}
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
 
-	private int slotId;
-	private int gymCenterId;
-	private LocalTime time;
+    public int getGymCenterId() { return gymCenterId; }
+
+    public void setGymCenterId(int gymCenterId) { this.gymCenterId = gymCenterId; }
+
+    private int slotId;
+    private int gymCenterId;
+    private String startTime;
+    private String endTime;
 }

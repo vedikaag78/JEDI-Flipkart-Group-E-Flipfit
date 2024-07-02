@@ -1,37 +1,40 @@
 /**
- * 
+ *
  */
 package com.flipkart.bean;
 
+import java.time.LocalDate;
+
 /**
- * 
+ *
  */
+
 public class Booking {
-	public int getBookingId() {
-		return bookingId;
-	}
+    private int bookingId;
+    private int customerId;
+    private int scheduleId;
 
-	public void setBookingId(int bookingId) {
-		this.bookingId = bookingId;
-	}
+    public int getBookingId() {
+        return bookingId;
+    }
 
-	public int getCustomerId() {
-		return customerId;
-	}
+    public void setBookingId(int bookingId) {
+        this.bookingId = bookingId;
+    }
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
-	}
+    public int getCustomerId() {
+        return customerId;
+    }
 
-	public int getSlotId() {
-		return slotId;
-	}
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
 
-	public void setSlotId(int slotId) {
-		this.slotId = slotId;
-	}
+    public int getScheduleId() {
+        return scheduleId;
+    }
 
-	private int bookingId;
-	private int customerId;
-	private int slotId;
+    public void setScheduleId(int scheduleId) {
+        this.scheduleId = scheduleId;
+    }
 }
