@@ -1,12 +1,15 @@
 package com.flipkart.restcontroller;
 
 import com.flipkart.business.CustomerBusiness;
+import com.flipkart.model.Booking;
 import com.flipkart.model.Customer;
+import com.flipkart.model.GymCenter;
 import com.flipkart.model.User;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 /**
  * REST controller for handling customer-related operations.
@@ -81,5 +84,13 @@ public class CustomerController {
         } else {
             return Response.status(Response.Status.NOT_FOUND).entity("Invalid custID").build();
         }
+    }
+
+    @GET
+    @Path("/view-bookings/{customerId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response viewCustomerBookings(@PathParam("customerId") int customerId) {
+        List<Booking> bookingList = customerBusiness.viewAllBookings(customerId);
+        return Response.ok(bookingList).build();
     }
 }

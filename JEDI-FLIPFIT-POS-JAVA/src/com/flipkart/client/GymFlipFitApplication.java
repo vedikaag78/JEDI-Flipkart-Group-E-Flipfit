@@ -59,8 +59,7 @@ public class GymFlipFitApplication {
                     1. Login
                     2. Register as Customer
                     3. Register as Gym Owner
-                    4. Change Password
-                    5. Exit
+                    4. Exit
                 --------------------------------------------""");
 
             int choice = scanner.nextInt();
@@ -79,10 +78,6 @@ public class GymFlipFitApplication {
                     break;
 
                 case 4:
-                    changePassword();
-                    break;
-
-                case 5:
                     System.out.println("Thank you for using FlipFit App!!\n");
                     return;
 

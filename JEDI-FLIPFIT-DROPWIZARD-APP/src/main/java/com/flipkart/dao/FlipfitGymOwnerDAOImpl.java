@@ -22,7 +22,7 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface {
         int userId = -1;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getUserRoleStmt = connection.prepareStatement(
                     "SELECT r.roleName, u.userId " +
@@ -54,7 +54,7 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface {
         int gymOwnerId = -1;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getGymOwnerIdStmt = connection.prepareStatement(
                     "SELECT gymOwnerId FROM GymOwners WHERE userId = ?;");
@@ -81,7 +81,7 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface {
     public boolean createGymOwner(GymOwner gymOwner){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement insertUserStmt = connection.prepareStatement(
                     "INSERT INTO Users (emailId, password, roleId)\n" +
@@ -139,7 +139,7 @@ public class FlipfitGymOwnerDAOImpl implements FlipfitGymOwnerDAOInterface {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getGymCenterStmt = connection.prepareStatement(
                     "SELECT * FROM gymCenters WHERE gymOwnerId = ?;");

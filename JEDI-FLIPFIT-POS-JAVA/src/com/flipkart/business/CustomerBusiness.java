@@ -72,6 +72,7 @@ public class CustomerBusiness implements CustomerInterface{
 					"\t\tstart time: " + slot.getStartTime() +
 					"\t\tend time: " + slot.getEndTime() +
 					"\t\tcenterId: " + schedule.getGymCenterId());
+			i++;
 		}
 		System.out.println("--------------------------------------------");
 	}

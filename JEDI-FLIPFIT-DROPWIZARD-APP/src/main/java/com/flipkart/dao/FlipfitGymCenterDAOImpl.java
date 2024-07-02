@@ -21,7 +21,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
     public boolean addSlotWithGymID(Slot slot){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement addSlotStmt = connection.prepareStatement(
                     "INSERT INTO slots(gymCenterId, startTime, endTime)\n" +
@@ -52,7 +52,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getGymCenterStmt = connection.prepareStatement(
                     "SELECT * FROM Slots WHERE gymCenterId = ?;");
@@ -88,7 +88,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getGymCenterStmt = connection.prepareStatement(
                     "SELECT gc.*\n" +
@@ -126,7 +126,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
         int gymCapacity = -1;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getAvailableSeatsStmt = connection.prepareStatement(
                     "SELECT capacity FROM GymCenters WHERE gymCenterId = ?;");
@@ -152,7 +152,7 @@ public class FlipfitGymCenterDAOImpl implements FlipfitGymCenterDAOInterface {
     public boolean createGymCenter(GymCenter gymCenter,int gymOwnerId){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
             PreparedStatement insertGymCenterStmt = connection.prepareStatement(
                     "INSERT INTO GymCenters ("+
                             "gymOwnerId, " +

@@ -57,4 +57,8 @@ public class CustomerBusiness {
             return Response.ok("Slot booked Successfully").build();
         else return Response.status(Response.Status.NOT_FOUND).entity("Opps!! Failed to book slot").build();
     }
+
+    public List<Booking> viewAllBookings(int customerId){
+        return bookingDAO.getAllBookingsByCustomerId(customerId);
+    }
 }

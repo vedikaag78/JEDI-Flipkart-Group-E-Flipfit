@@ -19,7 +19,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
         boolean isPresent = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement checkForScheduleStmt = connection.prepareStatement(
                     "SELECT COUNT(*) AS cnt FROM schedules WHERE slotId = ? AND scheduleDate = ?;");
@@ -32,7 +32,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             if(queryResult.next()) isPresent = queryResult.getInt("cnt")>0;
             connection.close();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         return isPresent;
     }
@@ -40,7 +40,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
     public boolean createSchedule(Schedule schedule, int availableSeats){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement createScheduleStmt = connection.prepareStatement(
                     "INSERT INTO schedules (gymCenterId, slotId, ScheduleDate, availability)\n" +
@@ -55,7 +55,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             connection.close();
             return (rowsAffected > 0);
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             return false;
         }
     }
@@ -63,7 +63,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
         int scheduleId = -1;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getScheduleIdStmt = connection.prepareStatement(
                     "SELECT scheduleId FROM schedules WHERE slotId = ? AND scheduleDate = ?;");
@@ -76,7 +76,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             if(queryResult.next()) scheduleId = queryResult.getInt("scheduleId");
             connection.close();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         return scheduleId;
     }
@@ -85,7 +85,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
         List<Booking> bookingList = new ArrayList<>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getAllBookingsStmt = connection.prepareStatement(
                     "SELECT * FROM bookings WHERE customerId = ?;");
@@ -102,7 +102,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         return bookingList;
     }
@@ -111,7 +111,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
         Schedule schedule = new Schedule();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getScheduleStmt = connection.prepareStatement(
                     "SELECT * FROM schedules WHERE scheduleId = ?;");
@@ -127,7 +127,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         return schedule;
     }
@@ -136,7 +136,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
         Slot slot = new Slot();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getSlotStmt = connection.prepareStatement(
                     "SELECT * FROM Slots WHERE slotId = ?;");
@@ -150,7 +150,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             }
             connection.close();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         return slot;
     }
@@ -158,7 +158,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
     public boolean decrementAvailableSeat(int scheduleId){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement decrementAvailableSeatStmt = connection.prepareStatement(
                     "UPDATE schedules SET availability = availability - 1 WHERE scheduleId = ? AND availability > 0;");
@@ -167,7 +167,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             int rowsAffected = decrementAvailableSeatStmt.executeUpdate();
             return (rowsAffected>0);
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             return false;
         }
     }
@@ -175,7 +175,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
     public boolean createBooking(Booking booking){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement decrementAvailableSeatStmt = connection.prepareStatement(
                     "INSERT INTO bookings (scheduleId, customerId)\n" +
@@ -187,7 +187,7 @@ public class FlipfitGymBookingDAOImpl implements FlipfitGymBookingDAOInterface {
             int rowsAffected = decrementAvailableSeatStmt.executeUpdate();
             return (rowsAffected>0);
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             return false;
         }
     }

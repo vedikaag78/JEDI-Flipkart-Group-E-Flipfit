@@ -28,7 +28,7 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface{
         String roleName = "";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement getUserRoleStmt = connection.prepareStatement(
                     "SELECT r.roleName, r.roleDescription " +
@@ -60,7 +60,7 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface{
         String updateQuery = "UPDATE gymOwners SET isVerified = true WHERE gymOwnerId = ?";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement stmt = connection.prepareStatement(updateQuery);
             stmt.setInt(1, gymOwnerId);
@@ -83,7 +83,7 @@ public class FlipfitAdminDAOImpl implements FlipfitAdminDAOInterface{
         String selectQuery = "SELECT * FROM gymOwners WHERE isVerified = false";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "Gm!@#%215035");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_schema", "root", "");
 
             PreparedStatement stmt = connection.prepareStatement(selectQuery);
             ResultSet queryResult = stmt.executeQuery();

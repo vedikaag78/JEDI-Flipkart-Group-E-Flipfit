@@ -55,7 +55,6 @@ public class GymOwnerController {
     public Response registerGymOwner(GymOwner gymOwner) {
         gymOwner.setVerified(false);
         boolean isCreated = gymOwnerBusiness.createGymOwner(gymOwner);
-        System.out.println(gymOwner.getGymOwnerName());
         if (isCreated) {
             return Response.ok("Gym Owner Registered Successfully").build();
         } else {
